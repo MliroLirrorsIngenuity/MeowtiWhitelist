@@ -1,0 +1,16 @@
+{
+    "id": "MCDR-ygg-whitelist-manager",
+    "version": "0.0.114514",
+    "name": "MCDR-ygg-whitelist-manager",
+    "description": "114514",
+    "author": [
+        "Lemon-miaow"
+    ],
+    "link": "https://github.com/MliroLirrorsIngenuity/MCDR-ygg-whitelist-manager",
+    "dependencies": {
+    },
+
+    "resources": [
+        "lang"
+    ]
+}
