@@ -1,0 +1,1 @@
+# MCDR-ygg-whitelist-manager
