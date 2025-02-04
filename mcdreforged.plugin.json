@@ -1,5 +1,5 @@
 {
-    "id": "MCDR-ygg-whitelist-manager",
+    "id": "mcdr_ygg_whitelist_manager",
     "version": "0.0.114514",
     "name": "MCDR-ygg-whitelist-manager",
     "description": "114514",
@@ -9,7 +9,6 @@
     "link": "https://github.com/MliroLirrorsIngenuity",
     "dependencies": {
     },
-
     "resources": [
         "lang"
     ]

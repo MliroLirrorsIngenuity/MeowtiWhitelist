@@ -1,2 +1,2 @@
 mcdreforged~=2.14.4
-aiohttp~=3.11.11
+requests~=2.32.3
