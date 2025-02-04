@@ -61,12 +61,13 @@ def list_whitelist(info: Info):
 
 def show_help_msg(info: Info):
     log(info, '''
-    ============== 白名插件 ===============
-    !!whitelist add [name] (API_num)    添加白名单
-    !!whitelist remove [name]       移除白名单
-    !!whitelist list                显示完整白名单
-    !!whitelist help                显示此帮助信息
-    ======================================''')
+    =======================白名插件=======================
+    !!whitelist add [name] (API num/name)    添加白名单
+    !!whitelist remove [name]                移除白名单
+    !!whitelist list                         显示完整白名单
+    !!whitelist help                         显示此帮助信息
+    ====================================================''')
+    show_choice_msg(info)
 
 
 def show_choice_msg(info: Info):
