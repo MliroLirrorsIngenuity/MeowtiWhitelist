@@ -73,8 +73,8 @@ def show_help_msg(info: Info):
 def show_choice_msg(info: Info):
     log(info, f'''
     API 可用选项：
-    1 = mojang
-    2 = littleskin
+    1 = Mojang
+    2 = LittleSkin
     ''')
 
 
