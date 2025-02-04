@@ -118,31 +118,43 @@ def on_user_info(server: PluginServerInterface, info: Info):
             if args[1] == 'add':
                 if server.get_permission_level(info) >= 3:
                     if len(args) > 2:
-                        api = int(args[3]) if len(args) > 3 and args[3] in api_methods else 1
+                        if len(args) > 3:
+                            if args[3].casefold() == 'mojang':
+                                api = 1
+                            elif args[3].casefold() == 'littleskin':
+                                api = 2
+                            elif args[3] in api_methods:
+                                api = int(args[3])
+                            else:
+                                log(info, '无效的 API 参数')
+                                show_choice_msg(info)
+                                return
+                        else:
+                            api = 1
                         add_whitelist(info, args[2], api)
                     else:
-                        log(info, 'Player name required.')
+                        log(info, '玩家名不能为空')
                 else:
-                    log(info, 'Permission denied.')
+                    log(info, '权限不足')
 
             elif args[1] == 'remove':
                 if server.get_permission_level(info) >= 3:
                     if len(args) > 2:
                         remove_whitelist(info, args[2])
                     else:
-                        log(info, 'Player name required.')
+                        log(info, '玩家名不能为空')
                 else:
-                    log(info, 'Permission denied.')
+                    log(info, '权限不足')
 
             elif args[1] == 'list':
                 if server.get_permission_level(info) >= 3:
                     list_whitelist(info)
                 else:
-                    log(info, 'Permission denied.')
+                    log(info, '权限不足')
 
             elif args[1] == 'help':
                 show_help_msg(info)
             else:
-                log(info, f'Error.')
+                log(info, f'Error')
         except IndexError:
             show_help_msg(info)
