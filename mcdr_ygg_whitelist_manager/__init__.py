@@ -66,7 +66,7 @@ def show_help_msg(info: Info):
     !!whitelist remove [name]                移除白名单
     !!whitelist list                         显示完整白名单
     !!whitelist help                         显示此帮助信息
-    ====================================================''')
+    ======================================================''')
     show_choice_msg(info)
 
 
