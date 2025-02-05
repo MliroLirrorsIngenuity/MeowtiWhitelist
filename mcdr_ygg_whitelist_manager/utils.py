@@ -3,8 +3,9 @@ import re
 from typing import Optional
 from mcdreforged.api.all import *
 
-def log(info: Info, text: str):
-    info.get_server().reply(info, text)
+def log(source: CommandSource,text):
+    text = RTextList(text)
+    source.reply(text)
 
 
 _UUID_PATTERN = re.compile(
@@ -37,3 +38,13 @@ def get_mojang_uuid_sync(username: str) -> Optional[str]:
     if response.status_code == 200:
         return _format_uuid(response.json().get("id", ""))
     return None
+
+
+# def get_example_uuid_sync(username: str) -> Optional[str]:
+#     url = "https://example.com/api/yggdrasil/api/profiles/minecraft"
+#     response = requests.post(url, json=[username], timeout=5)
+#     if response.status_code == 200:
+#         items = response.json()
+#         if items and isinstance(items, list) and len(items) > 0:
+#             return _format_uuid(items[0].get("id", ""))
+#     return None
