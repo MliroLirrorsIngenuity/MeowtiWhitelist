@@ -11,12 +11,6 @@ def server_cmd(src, command: str):
     src.get_server().execute(command)
 
 
-def json_file_to_list(json_path: str) -> list:
-    with open(json_path, 'r', encoding='UTF-8') as file:
-        output_dict = json.load(file)
-    return output_dict
-
-
 def create_whitelist_file(json_list: list, workpath: str, type: str):
     backup_dir = get_backup_dir(workpath)
     backup_whitelist_path = get_backup_whitelist_path(backup_dir, type)
@@ -27,15 +21,6 @@ def create_whitelist_file(json_list: list, workpath: str, type: str):
     write_new_whitelist(whitelist_path, json_list)
 
     clean_old_backups(backup_dir)
-
-
-def get_playerdata_filename_list():
-    filename_all = os.listdir(os.path.join(server_dirname, world_dirname, 'playerdata'))
-    playerdata_name_list = []
-    for filename in filename_all:
-        if filename[-4:] == '.dat':
-            playerdata_name_list.append(str(filename.split('.dat')[0]))
-    return playerdata_name_list
 
 
 def add_whitelist(src, player_name: str, api: str):

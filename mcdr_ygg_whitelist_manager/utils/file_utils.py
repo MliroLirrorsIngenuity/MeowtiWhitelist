@@ -8,6 +8,12 @@ def check_dir(dir_path):
         os.makedirs(dir_path)
 
 
+def json_file_to_list(json_path: str) -> list:
+    with open(json_path, 'r', encoding='UTF-8') as file:
+        output_dict = json.load(file)
+    return output_dict
+
+
 def get_backup_dir(workpath: str) -> str:
     backup_dir = os.path.join(workpath, 'whitelist_backup')
     check_dir(backup_dir)
