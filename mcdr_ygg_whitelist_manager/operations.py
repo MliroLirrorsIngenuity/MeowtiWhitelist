@@ -43,7 +43,7 @@ def create_whitelist_file(json_list: list, workpath: str, type: str):
         key=lambda f: os.path.getctime(os.path.join(backup_dir, f))
     )
 
-    while len(backups) > 10:
+    while len(backups) > 5:
         oldest_backup = backups.pop(0)
         os.remove(os.path.join(backup_dir, oldest_backup))
 
