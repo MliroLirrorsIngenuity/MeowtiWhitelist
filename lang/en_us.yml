@@ -1,0 +1,25 @@
+mcdr_ygg_whitelist_manager:
+  help_msg_name: 'Whitelist Management Plugin'
+  help_msg: |
+    ======================= Whitelist Plugin =======================
+    !!whitelist add [name] (API num/name)    Add to whitelist
+    !!whitelist remove [name]                Remove from whitelist
+    !!whitelist list                         Show the full whitelist
+    !!whitelist help                         Show this help message
+    ================================================================
+    Available API options:
+    1 = Mojang
+    2 = LittleSkin
+  list: "===== Whitelist =====:"
+  success:
+    add: "{player_name} has been added to the whitelist"
+    remove: "{player_name} has been removed from the whitelist"
+  error:
+    permission_denied: "Permission denied"
+    add_require_name: "Player name cannot be empty. Correct usage: !!whitelist add [name] (API num/name)"
+    remove_require_name: "Player name cannot be empty. Correct usage: !!whitelist remove [name]"
+    duplicate_name: "Player {player_name} is already on the whitelist"
+    require_api: "API cannot be empty. Correct usage: !!whitelist add [name] (API num/name)"
+    invalid_api: "Invalid API"
+    unknown_error: "Failed to add {0} to the whitelist. The user may not exist. Please try again."
+

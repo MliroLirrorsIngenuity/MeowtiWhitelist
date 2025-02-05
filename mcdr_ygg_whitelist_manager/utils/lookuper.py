@@ -1,11 +1,6 @@
 import requests
 import re
 from typing import Optional
-from mcdreforged.api.all import *
-
-def log(source: CommandSource,text):
-    text = RTextList(text)
-    source.reply(text)
 
 
 _UUID_PATTERN = re.compile(
