@@ -1,18 +1,10 @@
-import shutil
-import time
-import json
-import os
+from mcdr_ygg_whitelist_manager.utils.file_utils import *
 from mcdr_ygg_whitelist_manager.utils.logger import *
 from mcdr_ygg_whitelist_manager.utils.lookuper import *
 from mcdr_ygg_whitelist_manager.utils.translater import *
 
 server_dirname = 'server'
 world_dirname = 'world'
-
-
-def check_dir(dir_path):
-    if not os.path.exists(dir_path):
-        os.makedirs(dir_path)
 
 
 def server_cmd(src, command: str):
@@ -26,26 +18,15 @@ def json_file_to_list(json_path: str) -> list:
 
 
 def create_whitelist_file(json_list: list, workpath: str, type: str):
-    format_time = time.strftime('%y-%m-%d_%H-%M-%S', time.localtime())
-    backup_dir = os.path.join(workpath, 'whitelist_backup')
-    check_dir(backup_dir)
-    backup_whitelist_name = f"{format_time}_{type}_whitelist.json"
-    backup_whitelist_path = os.path.join(backup_dir, backup_whitelist_name)
+    backup_dir = get_backup_dir(workpath)
+    backup_whitelist_path = get_backup_whitelist_path(backup_dir, type)
     whitelist_path = os.path.join(workpath, 'whitelist.json')
-    if os.path.exists(whitelist_path):
-        shutil.move(whitelist_path, backup_whitelist_path)
 
-    with open(whitelist_path, 'w', encoding='UTF-8') as file:
-        json.dump(json_list, file, indent=4, ensure_ascii=False)
+    move_existing_whitelist(whitelist_path, backup_whitelist_path)
 
-    backups = sorted(
-        [f for f in os.listdir(backup_dir) if f.endswith('_whitelist.json')],
-        key=lambda f: os.path.getctime(os.path.join(backup_dir, f))
-    )
+    write_new_whitelist(whitelist_path, json_list)
 
-    while len(backups) > 5:
-        oldest_backup = backups.pop(0)
-        os.remove(os.path.join(backup_dir, oldest_backup))
+    clean_old_backups(backup_dir)
 
 
 def get_playerdata_filename_list():
