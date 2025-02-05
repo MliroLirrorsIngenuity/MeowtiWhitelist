@@ -1,6 +1,6 @@
-from mcdr_ygg_whitelist_manager.utils.logger import *
-from mcdr_ygg_whitelist_manager.utils.lookuper import *
-from mcdr_ygg_whitelist_manager.utils.translater import *
+from mcdr_ygg_whitelist_manager.utils.logger_utils import *
+from mcdr_ygg_whitelist_manager.utils.lookuper_utils import *
+from mcdr_ygg_whitelist_manager.utils.translater_utils import *
 from mcdr_ygg_whitelist_manager.operations import *
 
 
