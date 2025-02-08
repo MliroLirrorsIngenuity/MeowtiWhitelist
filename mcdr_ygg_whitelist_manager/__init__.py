@@ -5,7 +5,7 @@ from mcdr_ygg_whitelist_manager.operations import *
 
 
 def on_load(server: PluginServerInterface, prev):
-    server.register_help_message('!!whitelist', tr(" help_msg_name"))
+    server.register_help_message('!!whitelist', tr("help_msg_name"))
     register_command(server)
 
 
