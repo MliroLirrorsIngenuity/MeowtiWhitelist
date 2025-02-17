@@ -25,4 +25,4 @@ mcdr_ygg_whitelist_manager:
     duplicate_name: "§cPlayer {0} is already on the whitelist"
     require_api: "§cAPI cannot be empty. Correct usage: §r{0} add §e[name] §b(API num/name)§r"
     invalid_api: "§cInvalid API"
-    unknown_error: "§cFailed to add {0} to the whitelist. The user may not exist. Please try again."
+    unknown_error: "§cFailed to add player {0} to the whitelist. The user may not exist. Please try again."

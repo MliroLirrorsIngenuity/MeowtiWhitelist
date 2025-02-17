@@ -25,4 +25,4 @@ mcdr_ygg_whitelist_manager:
     duplicate_name: "§c玩家 {0} 已在白名单中"
     require_api: "§cAPI不能为空，正确用法： §r{0} add §e[name] §b(API num/name)§r"
     invalid_api: "§c无效的 API"
-    unknown_error: "§c添加 {0} 白名单时出现错误或用户不存在，请重试"
+    unknown_error: "§c添加玩家 {0} 白名单时出现错误或用户不存在，请重试"
