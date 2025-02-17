@@ -1,3 +1,4 @@
+from mcdr_ygg_whitelist_manager.constants import PREFIX
 from mcdr_ygg_whitelist_manager.utils.config_utils import config
 from mcdr_ygg_whitelist_manager.utils.logger_utils import *
 from mcdr_ygg_whitelist_manager.utils.lookuper_utils import *
@@ -6,7 +7,7 @@ from mcdr_ygg_whitelist_manager.operations import *
 
 
 def on_load(server: PluginServerInterface, prev):
-    server.register_help_message('!!whitelist', tr("help_msg_name"))
+    server.register_help_message(PREFIX, tr("help_msg_name"))
     register_command(server)
 
 
@@ -15,7 +16,7 @@ def register_command(server: PluginServerInterface):
         return Literal(literal)
 
     server.register_command(
-        Literal("!!whitelist")
+        Literal(PREFIX)
         .requires(lambda src: src.has_permission(config.permission))
         .on_error(
             RequirementNotMet,
