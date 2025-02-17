@@ -1,6 +1,6 @@
 {
     "id": "mcdr_ygg_whitelist_manager",
-    "version": "0.0.114514",
+    "version": "1.0.0",
     "name": "MCDR-ygg-whitelist-manager",
     "description": "A MCDR plugin that can manage the whitelist of a Minecraft server using the multiple Yggdrasil API.",
     "author": [
