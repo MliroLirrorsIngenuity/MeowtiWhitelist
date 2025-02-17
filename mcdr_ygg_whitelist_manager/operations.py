@@ -1,11 +1,8 @@
+from mcdr_ygg_whitelist_manager.utils.config_utils import server_dirname
 from mcdr_ygg_whitelist_manager.utils.file_utils import *
 from mcdr_ygg_whitelist_manager.utils.logger_utils import *
 from mcdr_ygg_whitelist_manager.utils.lookuper_utils import *
 from mcdr_ygg_whitelist_manager.utils.translater_utils import *
-
-server_dirname = 'server'
-world_dirname = 'world'
-
 
 def server_cmd(src, command: str):
     src.get_server().execute(command)

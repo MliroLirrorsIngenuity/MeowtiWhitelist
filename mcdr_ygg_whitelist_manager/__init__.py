@@ -1,3 +1,4 @@
+from mcdr_ygg_whitelist_manager.utils.config_utils import config
 from mcdr_ygg_whitelist_manager.utils.logger_utils import *
 from mcdr_ygg_whitelist_manager.utils.lookuper_utils import *
 from mcdr_ygg_whitelist_manager.utils.translater_utils import *
@@ -15,7 +16,7 @@ def register_command(server: PluginServerInterface):
 
     server.register_command(
         Literal("!!whitelist")
-        .requires(lambda src: src.has_permission(3))
+        .requires(lambda src: src.has_permission(config.permission))
         .on_error(
             RequirementNotMet,
             lambda src: log(src, tr("error.permission_denied")),
