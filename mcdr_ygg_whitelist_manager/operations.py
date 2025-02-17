@@ -36,7 +36,7 @@ def add_whitelist(src, player_name: str, api: str):
 
     whitelist_path = get_whitelist_path(server_dirname)
     whitelist_list: list = json_file_to_list(whitelist_path)
-    whitelist_name_list = [entry['name'] for entry in whitelist_list]
+    whitelist_name_list = {entry['name'] for entry in whitelist_list}
 
     if player_name in whitelist_name_list:
         log(src, tr("error.duplicate_name", player_name))
