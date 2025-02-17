@@ -19,7 +19,7 @@ mcdr_ygg_whitelist_manager:
     add_require_name: "Player name cannot be empty. Correct usage: !!whitelist add [name] (API num/name)"
     remove_require_name: "Player name cannot be empty. Correct usage: !!whitelist remove [name]"
     not_found: "Player {0} is not on the whitelist"
-    duplicate_name: "Player {player_name} is already on the whitelist"
+    duplicate_name: "Player {0} is already on the whitelist"
     require_api: "API cannot be empty. Correct usage: !!whitelist add [name] (API num/name)"
     invalid_api: "Invalid API"
     unknown_error: "Failed to add {0} to the whitelist. The user may not exist. Please try again."
