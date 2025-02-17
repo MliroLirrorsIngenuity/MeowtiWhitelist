@@ -9,6 +9,10 @@ mcdr_ygg_whitelist_manager:
     §a [Available API options]
     §e 1 = Mojang
     §e 2 = LittleSkin
+  api_list: |
+    §a [Available API options]
+    §e 1 = Mojang
+    §e 2 = LittleSkin
   list: "§a===== Whitelist ====="
   success:
     add: "§a{0} has been added to the whitelist"
