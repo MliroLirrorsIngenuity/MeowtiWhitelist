@@ -22,4 +22,3 @@ mcdr_ygg_whitelist_manager:
     require_api: "API cannot be empty. Correct usage: !!whitelist add [name] (API num/name)"
     invalid_api: "Invalid API"
     unknown_error: "Failed to add {0} to the whitelist. The user may not exist. Please try again."
-
