@@ -2,7 +2,6 @@ import requests
 import re
 from typing import Optional
 
-
 _UUID_PATTERN = re.compile(
     r"([a-fA-F0-9]{8})"
     r"([a-fA-F0-9]{4})"
