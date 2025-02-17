@@ -1,5 +1,5 @@
 mcdr_ygg_whitelist_manager:
-  help_msg_name: '白名单管理插件'
+  help_msg_name: 'Yggdrasil 白名单管理插件'
   help_msg: |
     ==============MCDR-ygg-whitelist-manager==============
     §7{0} add §e[name] §b(API num/name)§r    添加白名单

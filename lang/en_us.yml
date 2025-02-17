@@ -1,5 +1,5 @@
 mcdr_ygg_whitelist_manager:
-  help_msg_name: 'Whitelist Management Plugin'
+  help_msg_name: 'Yggdrasil Whitelist Management Plugin'
   help_msg: |
     ==============MCDR-ygg-whitelist-manager==============
     §7{0} add §e[name] §b(API num/name)§r    Add to whitelist
