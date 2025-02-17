@@ -1,25 +1,24 @@
 mcdr_ygg_whitelist_manager:
   help_msg_name: '白名单管理插件'
   help_msg: |
-    =======================白名插件=======================
-    !!whitelist add [name] (API num/name)    添加白名单
-    !!whitelist remove [name]                移除白名单
-    !!whitelist list                         显示完整白名单
-    !!whitelist help                         显示此帮助信息
-    ======================================================
-    API 可用选项：
-    1 = Mojang
-    2 = LittleSkin
-  list: "===== 白名单 =====："
+    ==============MCDR-ygg-whitelist-manager==============
+    §7{0} add §e[name] §b(API num/name)§r    添加白名单
+    §7{0} remove §e[name]§r    移除白名单
+    §7{0} list§r    显示完整白名单
+    §7{0} help§r    显示此帮助信息
+    §a【API 可用选项】
+    §e 1 = Mojang
+    §e 2 = LittleSkin
+  list: "§a===== 白名单 ====="
   success:
-    add: "已添加 {0} 到白名单"
-    remove: "已移除 {0} 白名单"
+    add: "§a已添加 {0} 到白名单"
+    remove: "§a已移除 {0} 白名单"
   error:
-    permission_denied: "权限不足"
-    add_require_name: "玩家名不能为空，正确用法：!!whitelist add [name] (API num/name)"
-    remove_require_name: "玩家名不能为空，正确用法：!!whitelist remove [name]"
-    not_found: "玩家 {0} 未在白名单中"
-    duplicate_name: "玩家 {0} 已在白名单中"
-    require_api: "API不能为空，正确用法：!!whitelist add [name] (API num/name)"
-    invalid_api: "无效的 API"
-    unknown_error: "添加 {0} 白名单时出现错误或用户不存在，请重试"
+    permission_denied: "§c权限不足"
+    add_require_name: "§c玩家名不能为空，正确用法： §r{0} add §e[name] §b(API num/name)§r"
+    remove_require_name: "§c玩家名不能为空，正确用法： §r{0} remove §e[name]§r"
+    not_found: "§c玩家 {0} 未在白名单中"
+    duplicate_name: "§c玩家 {0} 已在白名单中"
+    require_api: "§cAPI不能为空，正确用法： §r{0} add §e[name] §b(API num/name)§r"
+    invalid_api: "§c无效的 API"
+    unknown_error: "§c添加 {0} 白名单时出现错误或用户不存在，请重试"

@@ -1,3 +1,4 @@
+from mcdr_ygg_whitelist_manager import PREFIX
 from mcdr_ygg_whitelist_manager.utils.config_utils import server_dirname
 from mcdr_ygg_whitelist_manager.utils.file_utils import *
 from mcdr_ygg_whitelist_manager.utils.logger_utils import *
@@ -31,7 +32,7 @@ def add_whitelist(src, player_name: str, api: str):
         api = int(api)
     else:
         log(src, tr("error.invalid_api"))
-        log(src, tr("help_msg"))
+        log(src, tr("help_msg", PREFIX))
         return
 
     whitelist_path = get_whitelist_path(server_dirname)

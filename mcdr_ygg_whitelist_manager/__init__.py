@@ -23,16 +23,16 @@ def register_command(server: PluginServerInterface):
             lambda src: log(src, tr("error.permission_denied")),
             handled=True,
         )
-        .runs(lambda src: log(src,tr("help_msg")))
+        .runs(lambda src: log(src,tr("help_msg", PREFIX)))
         .then(
             get_literal_node("help")
-            .runs(lambda src: log(src,tr("help_msg")))
+            .runs(lambda src: log(src,tr("help_msg", PREFIX)))
         )
         .then(
             get_literal_node("add")
-            .runs(lambda src: log(src, tr("error.add_require_name")))
+            .runs(lambda src: log(src, tr("error.add_require_name", PREFIX)))
             .then(
-                Text("player_name").runs(lambda src: log(src, tr("error.require_api")))
+                Text("player_name").runs(lambda src: log(src, tr("error.require_api", PREFIX)))
                 .then(
                     Text("api").runs(lambda src, ctx: add_whitelist(src, ctx["player_name"], str(ctx["api"])))
                     .on_error(
@@ -45,7 +45,7 @@ def register_command(server: PluginServerInterface):
         )
         .then(
             get_literal_node("remove")
-            .runs(lambda src: log(src, tr("error.remove_require_name")))
+            .runs(lambda src: log(src, tr("error.remove_require_name", PREFIX)))
             .then(
                 Text("player_name").runs(lambda src, ctx: remove_whitelist(src, ctx["player_name"]))
             )

@@ -1,27 +1,24 @@
 mcdr_ygg_whitelist_manager:
   help_msg_name: 'Whitelist Management Plugin'
   help_msg: |
-    ======================= Whitelist Plugin =======================
-    !!whitelist add [name] (API num/name)    Add to whitelist
-    !!whitelist remove [name]                Remove from whitelist
-    !!whitelist list                         Show the full whitelist
-    !!whitelist help                         Show this help message
-    ================================================================
-    Available API options:
-    1 = Mojang
-    2 = LittleSkin
-  list: "===== Whitelist =====:"
+    ==============MCDR-ygg-whitelist-manager==============
+    §7{0} add §e[name] §b(API num/name)§r    Add to whitelist
+    §7{0} remove §e[name]§r    Remove from whitelist
+    §7{0} list§r    Show the full whitelist
+    §7{0} help§r    Show this help message
+    §a [Available API options]
+    §e 1 = Mojang
+    §e 2 = LittleSkin
+  list: "§a===== Whitelist ====="
   success:
-    add: "{player_name} has been added to the whitelist"
-    remove: "{player_name} has been removed from the whitelist"
-    add: "{0} has been added to the whitelist"
-    remove: "{0} has been removed from the whitelist"
+    add: "§a{0} has been added to the whitelist"
+    remove: "§a{0} has been removed from the whitelist"
   error:
-    permission_denied: "Permission denied"
-    add_require_name: "Player name cannot be empty. Correct usage: !!whitelist add [name] (API num/name)"
-    remove_require_name: "Player name cannot be empty. Correct usage: !!whitelist remove [name]"
-    not_found: "Player {0} is not on the whitelist"
-    duplicate_name: "Player {0} is already on the whitelist"
-    require_api: "API cannot be empty. Correct usage: !!whitelist add [name] (API num/name)"
-    invalid_api: "Invalid API"
-    unknown_error: "Failed to add {0} to the whitelist. The user may not exist. Please try again."
+    permission_denied: "§cPermission denied"
+    add_require_name: "§cPlayer name cannot be empty. Correct usage: §r{0} add §e[name] §b(API num/name)§r"
+    remove_require_name: "§cPlayer name cannot be empty. Correct usage: §r{0} remove §e[name]§r"
+    not_found: "§cPlayer {0} is not on the whitelist"
+    duplicate_name: "§cPlayer {0} is already on the whitelist"
+    require_api: "§cAPI cannot be empty. Correct usage: §r{0} add §e[name] §b(API num/name)§r"
+    invalid_api: "§cInvalid API"
+    unknown_error: "§cFailed to add {0} to the whitelist. The user may not exist. Please try again."
