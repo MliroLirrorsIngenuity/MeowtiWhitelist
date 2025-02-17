@@ -14,6 +14,8 @@ mcdr_ygg_whitelist_manager:
   success:
     add: "{player_name} has been added to the whitelist"
     remove: "{player_name} has been removed from the whitelist"
+    add: "{0} has been added to the whitelist"
+    remove: "{0} has been removed from the whitelist"
   error:
     permission_denied: "Permission denied"
     add_require_name: "Player name cannot be empty. Correct usage: !!whitelist add [name] (API num/name)"
