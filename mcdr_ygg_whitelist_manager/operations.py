@@ -1,4 +1,3 @@
-from mcdr_ygg_whitelist_manager import PREFIX
 from mcdr_ygg_whitelist_manager.utils.config_utils import server_dirname
 from mcdr_ygg_whitelist_manager.utils.file_utils import *
 from mcdr_ygg_whitelist_manager.utils.logger_utils import *
