@@ -34,7 +34,7 @@ def register_command(server: PluginServerInterface):
             .then(
                 Text("player_name").runs(lambda src: log(src, tr("error.require_api", PREFIX)))
                 .then(
-                    Text("api").runs(lambda src, ctx: add_whitelist(src, ctx["player_name"], str(ctx["api"])))
+                    Text("api").runs(lambda src, ctx: add_whitelist(src, ctx["player_name"], ctx["api"]))
                     .on_error(
                         RequirementNotMet,
                         lambda src, ctx: log(src, tr("error.unknown_error", ctx["player_name"])),
