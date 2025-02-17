@@ -18,6 +18,7 @@ mcdr_ygg_whitelist_manager:
     permission_denied: "Permission denied"
     add_require_name: "Player name cannot be empty. Correct usage: !!whitelist add [name] (API num/name)"
     remove_require_name: "Player name cannot be empty. Correct usage: !!whitelist remove [name]"
+    not_found: "Player {0} is not on the whitelist"
     duplicate_name: "Player {player_name} is already on the whitelist"
     require_api: "API cannot be empty. Correct usage: !!whitelist add [name] (API num/name)"
     invalid_api: "Invalid API"
