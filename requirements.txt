@@ -1,2 +1,2 @@
-mcdreforged~=2.14.4
-requests~=2.32.3
+mcdreforged>=2.12.0
+requests>=2.31.0
