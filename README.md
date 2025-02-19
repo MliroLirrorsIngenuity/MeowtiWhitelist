@@ -1,1 +1,1 @@
-# MCDR-ygg-whitelist-manager
+# MultiWhitelist

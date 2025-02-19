@@ -1,8 +1,8 @@
 import os
 
-from mcdr_ygg_whitelist_manager.constants import CONFIG_FILE
-from mcdr_ygg_whitelist_manager.utils.logger_utils import *
-from mcdr_ygg_whitelist_manager.utils.translater_utils import *
+from multiwhitelist.constants import CONFIG_FILE
+from multiwhitelist.utils.logger_utils import *
+from multiwhitelist.utils.translater_utils import *
 
 class Configuration(Serializable):
     server_dirname: str = "server"

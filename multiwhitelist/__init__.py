@@ -1,9 +1,9 @@
-from mcdr_ygg_whitelist_manager.constants import PREFIX
-from mcdr_ygg_whitelist_manager.utils.config_utils import config
-from mcdr_ygg_whitelist_manager.utils.logger_utils import *
-from mcdr_ygg_whitelist_manager.utils.lookuper_utils import *
-from mcdr_ygg_whitelist_manager.utils.translater_utils import *
-from mcdr_ygg_whitelist_manager.operations import *
+from multiwhitelist.constants import PREFIX
+from multiwhitelist.utils.config_utils import config
+from multiwhitelist.utils.logger_utils import *
+from multiwhitelist.utils.lookuper_utils import *
+from multiwhitelist.utils.translater_utils import *
+from multiwhitelist.operations import *
 
 
 def on_load(server: PluginServerInterface, prev):
