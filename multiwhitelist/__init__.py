@@ -1,19 +1,24 @@
 from multiwhitelist.constants import PREFIX
 from multiwhitelist.utils.config_utils import config
 from multiwhitelist.utils.logger_utils import *
-from multiwhitelist.utils.lookuper_utils import *
+from multiwhitelist.utils.uuid_utils.uuid_utils import *
 from multiwhitelist.utils.translater_utils import *
 from multiwhitelist.operations import *
 
 
 def on_load(server: PluginServerInterface, prev):
     server.register_help_message(PREFIX, tr("help_msg_name"))
+    create_example_files()
     register_command(server)
 
 
 def register_command(server: PluginServerInterface):
     def get_literal_node(literal):
         return Literal(literal)
+
+    def show_help(src: CommandSource):
+        log(src, tr("help_msg", PREFIX))
+        log_available_apis(src)
 
     server.register_command(
         Literal(PREFIX)
@@ -23,10 +28,10 @@ def register_command(server: PluginServerInterface):
             lambda src: log(src, tr("error.permission_denied")),
             handled=True,
         )
-        .runs(lambda src: log(src,tr("help_msg", PREFIX)))
+        .runs(lambda src: show_help(src))
         .then(
             get_literal_node("help")
-            .runs(lambda src: log(src,tr("help_msg", PREFIX)))
+            .runs(lambda src: show_help(src))
         )
         .then(
             get_literal_node("add")

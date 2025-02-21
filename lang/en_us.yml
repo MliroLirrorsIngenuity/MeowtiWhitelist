@@ -6,13 +6,10 @@ multiwhitelist:
     §7{0} remove §e[name]§r    Remove from whitelist
     §7{0} list§r    Show the full whitelist
     §7{0} help§r    Show this help message
-    §a [Available API options]
-    §e 1 = Mojang
-    §e 2 = LittleSkin
-  api_list: |
-    §a [Available API options]
-    §e 1 = Mojang
-    §e 2 = LittleSkin
+  available_apis:
+    header: "§a===== [Available API options] ====="
+    item: "§e{0} = §b{1}§r"
+    none: "§cNo available APIs"
   list: "§a===== Whitelist ====="
   success:
     add: "§a{0} has been added to the whitelist"
@@ -26,3 +23,5 @@ multiwhitelist:
     require_api: "§cAPI cannot be empty. Correct usage: §r{0} add §e[name] §b(API num/name)§r"
     invalid_api: "§cInvalid API"
     unknown_error: "§cFailed to add player {0} to the whitelist. The user may not exist. Please try again."
+    api_not_configure: "§cAPI configuration error"
+    api_status_code: "§cAPI request failed, status code: {0}"

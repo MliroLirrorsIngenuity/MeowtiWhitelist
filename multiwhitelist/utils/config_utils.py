@@ -1,6 +1,6 @@
 import os
 
-from multiwhitelist.constants import CONFIG_FILE
+from multiwhitelist.constants import CONFIG_FILE, CONFIG_DIR
 from multiwhitelist.utils.logger_utils import *
 from multiwhitelist.utils.translater_utils import *
 
@@ -13,7 +13,11 @@ class Configuration(Serializable):
         server_interface.save_config_simple(self, CONFIG_FILE, in_data_folder=False)
 
 def load_configuration() -> Configuration:
+    if not os.path.exists(CONFIG_DIR):
+        os.makedirs(CONFIG_DIR, exist_ok=True)
+
     server_interface = ServerInterface.get_instance().as_plugin_server_interface()
+
     if not os.path.exists(CONFIG_FILE):
         _config = Configuration()
         _config.save()

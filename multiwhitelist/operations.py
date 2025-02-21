@@ -1,11 +1,9 @@
 from multiwhitelist.utils.config_utils import server_dirname
 from multiwhitelist.utils.file_utils import *
 from multiwhitelist.utils.logger_utils import *
-from multiwhitelist.utils.lookuper_utils import *
+from multiwhitelist.utils.uuid_utils.service_loader import build_service_mapping
+from multiwhitelist.utils.uuid_utils.uuid_utils import fetchers
 from multiwhitelist.utils.translater_utils import *
-
-def server_cmd(src, command: str):
-    src.get_server().execute(command)
 
 
 def create_whitelist_file(json_list: list, workpath: str, type: str):
@@ -19,19 +17,23 @@ def create_whitelist_file(json_list: list, workpath: str, type: str):
 
 
 def add_whitelist(src, player_name: str, api: str):
-    api_methods = {
-        1: get_mojang_uuid_sync,
-        2: get_littleskin_uuid_sync
-    }
-    if api.casefold() == 'mojang':
-        api = 1
-    elif api.casefold() == 'littleskin':
-        api = 2
-    elif api.isdigit() and int(api) in api_methods:
-        api = int(api)
-    else:
+    player_name = player_name.strip()
+    if not player_name:
+        log(src, tr("error.empty_username"))
+        return
+
+    service_map = build_service_mapping()
+    normalized_api = api.strip().lower()
+
+    if normalized_api not in service_map:
         log(src, tr("error.invalid_api"))
-        log(src, tr("api_list"))
+        log_available_apis(src)
+        return
+
+    service_id = service_map[normalized_api]
+
+    if (uuid_func := fetchers.get(service_id)) is None:
+        log(src, tr("error.api_not_configured", service_id))
         return
 
     whitelist_path = get_whitelist_path(server_dirname)
@@ -41,8 +43,10 @@ def add_whitelist(src, player_name: str, api: str):
     if player_name in whitelist_name_list:
         log(src, tr("error.duplicate_name", player_name))
     else:
-        uuid = api_methods.get(api, None)(player_name)
-        if uuid is not None:
+        uuid = uuid_func(player_name)
+        if isinstance(uuid, int):
+            log(src, tr("error.api_status_code", uuid))
+        elif uuid is not None:
             new_whitelist_dict = {'uuid': uuid, 'name': player_name}
             whitelist_list.append(new_whitelist_dict)
             create_whitelist_file(whitelist_list, server_dirname, '_A_')
@@ -72,3 +76,7 @@ def list_whitelist(src):
     for i, entry in enumerate(whitelist_list, 1):
         player_name, player_uuid = entry['name'], entry['uuid']
         log(src, f'{i}: {player_name} - {player_uuid}')
+
+
+def server_cmd(src, command: str):
+    src.get_server().execute(command)

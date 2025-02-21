@@ -6,13 +6,10 @@ multiwhitelist:
     §7{0} remove §e[name]§r    移除白名单
     §7{0} list§r    显示完整白名单
     §7{0} help§r    显示此帮助信息
-    §a【API 可用选项】
-    §e 1 = Mojang
-    §e 2 = LittleSkin
-  api_list: |
-    §a【API 可用选项】
-    §e 1 = Mojang
-    §e 2 = LittleSkin
+  available_apis:
+    header: "§a===== 【API 可用选项】 ====="
+    item: "§e{0} = §b{1}§r"
+    none: "§c没有可用的API"
   list: "§a===== 白名单 ====="
   success:
     add: "§a已添加 {0} 到白名单"
@@ -26,3 +23,5 @@ multiwhitelist:
     require_api: "§cAPI不能为空，正确用法： §r{0} add §e[name] §b(API num/name)§r"
     invalid_api: "§c无效的 API"
     unknown_error: "§c添加玩家 {0} 白名单时出现错误或用户不存在，请重试"
+    api_not_configure: "§cAPI 配置错误"
+    api_status_code: "§cAPI 请求失败，状态码：{0}"
