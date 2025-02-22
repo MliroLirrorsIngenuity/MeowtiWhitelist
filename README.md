@@ -9,8 +9,19 @@ MultiWhitelist 是一款基于 [MCDReforged](https://mcdreforged.com/) 多验证
 
 ## 目录
 
+- [安装](#安装)
+- [使用方式](#使用方式)
 
+## 安装
+
+~~把大象装进冰箱需要几步~~
+
+- 从 [GitHub Releases]中下载最新版本的MultiWhitelist
+- 将下载的插件放入`plugins`目录中
+- [通过MCDReforged启动服务器](https://docs.mcdreforged.com/zh-cn/latest/quick_start/first_run.html#run)
 
 ## 使用方式
+
+
 
 ## 
