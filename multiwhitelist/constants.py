@@ -1,5 +1,6 @@
 import os
 
+
 PREFIX = "!!whitelist"
 
 CONFIG_DIR = os.path.join("config", "MultiWhitelist")

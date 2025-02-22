@@ -1,8 +1,9 @@
 import os
 
+from mcdreforged.api.all import *
+
 from multiwhitelist.constants import CONFIG_FILE, CONFIG_DIR
-from multiwhitelist.utils.logger_utils import *
-from multiwhitelist.utils.translater_utils import *
+
 
 class Configuration(Serializable):
     server_dirname: str = "server"
