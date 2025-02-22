@@ -25,11 +25,12 @@ MultiWhitelist 是一款基于 [MCDReforged](https://mcdreforged.com/) 多验证
     ├─ logs/
     │   └─ MCDR.log
     ├─ plugins/
-        ├─ MultiWhitelist-v{x.y.z}.mcdr
+        ├─ ...
+++  │   └─MultiWhitelist-v{x.y.z}.mcdr
     ├─ server/
-++  │   ├─ ...
-++  │   ├─ minecraft_server.jar
-++  │   └─ server.properties
+        ├─ ...
+        ├─ minecraft_server.jar
+        └─ server.properties
     ├─ config.yml
     └─ permission.yml
 ```
