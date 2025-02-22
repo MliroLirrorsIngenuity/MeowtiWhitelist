@@ -44,8 +44,6 @@ MultiWhitelist 是一款基于 [MCDReforged](https://mcdreforged.com/) 开发的
 
 ### 配置
 
-
-
 ## 提问前必看
 
 WIP
