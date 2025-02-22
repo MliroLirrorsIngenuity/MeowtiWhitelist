@@ -44,6 +44,24 @@ MultiWhitelist 是一款基于 [MCDReforged](https://mcdreforged.com/) 开发的
 
 ### 配置
 
+在安装插件以后，你还需要为插件配置服务。为了方便使用，我们已经提前内置好了模板。
+
+在首次运行之后，插件将会释放配置文件，并存放在`config`目录之中，如下所示。
+
+```bash
+    my_mcdr_server/config
+    ├── mcdreforged
+    │   └── ...
+++  └── MultiWhitelist
+        ├── config.json
+        ├── example
+        │   ├── littleskin.yml
+        │   └── mojang.yml
+        └── service
+```
+
+WIP
+
 ## 提问前必看
 
 WIP
