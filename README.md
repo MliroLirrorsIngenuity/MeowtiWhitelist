@@ -1,6 +1,6 @@
 # MultiWhitelist
 
-MultiWhitelist 是一款基于 [MCDReforged](https://mcdreforged.com/) 多验证服务白名单管理插件。
+MultiWhitelist 是一款基于 [MCDReforged](https://mcdreforged.com/) 开发的多验证服务白名单管理插件。
 
 使用本插件，可以：
 
