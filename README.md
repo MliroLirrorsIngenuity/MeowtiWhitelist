@@ -26,7 +26,7 @@ MultiWhitelist 是一款基于 [MCDReforged](https://mcdreforged.com/) 多验证
     │   └─ MCDR.log
     ├─ plugins/
         ├─ ...
-++  │   └─MultiWhitelist-v{x.y.z}.mcdr
+++  │   └─ MultiWhitelist-v{x.y.z}.mcdr
     ├─ server/
         ├─ ...
         ├─ minecraft_server.jar
