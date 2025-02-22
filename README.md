@@ -12,6 +12,7 @@ MultiWhitelist 是一款基于 [MCDReforged](https://mcdreforged.com/) 开发的
 
 - [安装](#安装)
 - [使用方式](#使用方式)
+- [提问前必看](#提问前必看)
 
 ## 安装
 
@@ -40,6 +41,8 @@ MultiWhitelist 是一款基于 [MCDReforged](https://mcdreforged.com/) 开发的
 
 ## 使用方式
 
+- `!!whitelist add`
 
+## 提问前必看
 
-## 
+WIP
