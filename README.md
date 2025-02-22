@@ -10,11 +10,14 @@ MultiWhitelist 是一款基于 [MCDReforged](https://mcdreforged.com/) 开发的
 
 ## 目录
 
-- [安装](#安装)
 - [使用方式](#使用方式)
+  - [安装](#安装)
+  - [配置](#配置)
 - [提问前必看](#提问前必看)
 
-## 安装
+## 使用方式
+
+### 安装
 
 ~~把大象装进冰箱需要几步~~
 
@@ -39,9 +42,9 @@ MultiWhitelist 是一款基于 [MCDReforged](https://mcdreforged.com/) 开发的
 
 - [通过MCDReforged启动服务器](https://docs.mcdreforged.com/zh-cn/latest/quick_start/first_run.html#run)
 
-## 使用方式
+### 配置
 
-- `!!whitelist add`
+
 
 ## 提问前必看
 
