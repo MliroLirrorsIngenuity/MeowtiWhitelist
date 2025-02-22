@@ -5,7 +5,8 @@ MultiWhitelist 是一款基于 [MCDReforged](https://mcdreforged.com/) 开发的
 使用本插件，可以：
 
 - 解决使用多个不同 Yggdrasil 验证服务导致的UUID冲突或不同的问题。
-- 
+- ~~无需再费力确认`whitelist.json`到底改没改对~~
+- 无需再费力确认白名单是否生效
 
 ## 目录
 
