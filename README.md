@@ -48,7 +48,7 @@ MultiWhitelist 是一款基于 [MCDReforged](https://mcdreforged.com/) 开发的
 
 #### 找到配置文件
 
-在安装插件以后，你还需要为插件配置服务。为了方便使用，我们已经提前内置好了模板。
+在安装插件以后，你还需要为插件配置服务。为了方便使用，我们已经提前内置好了主要验证方式的模板。
 
 在首次运行之后，插件将会释放配置文件，并存放在`config`目录之中，如下所示。
 
@@ -69,7 +69,7 @@ MultiWhitelist 是一款基于 [MCDReforged](https://mcdreforged.com/) 开发的
 
 #### 启用验证服务
 
-这里以 LittleSkin 的验证服务举例
+这里以 LittleSkin 的配置文件模板 `littleskin.yml` 举例
 
 ``` yaml littleskin.yml
 
@@ -84,6 +84,8 @@ yggdrasilAuth:
     apiRoot: 'https://littleskin.cn/api/yggdrasil'
 
 ```
+
+- `id` 是验证服务使用的序号，从1开始
 
 ## 提问前必看
 
