@@ -5,8 +5,8 @@ MultiWhitelist 是一款基于 [MCDReforged](https://mcdreforged.com/) 开发的
 使用本插件，可以：
 
 - 解决使用多个不同 Yggdrasil 验证服务导致的UUID冲突或不同的问题。
-- ~~无需再费力确认`whitelist.json`到底改没改对~~
-- 无需再费力确认白名单是否生效
+- 简单一行，管理来自不同 **Yggdrasil** 验证来源的白名单添加。
+- ~~不是哥们谁又手动改`whitelist.json`~~
 
 ## 目录
 
@@ -23,21 +23,17 @@ MultiWhitelist 是一款基于 [MCDReforged](https://mcdreforged.com/) 开发的
 
 ~~把大象装进冰箱需要几步~~
 
-- 从 [GitHub Releases]中下载最新版本的MultiWhitelist
+- 从 [GitHub Releases](https://github.com/MliroLirrorsIngenuity/MultiWhitelist/releases)中下载最新版本的MultiWhitelist
 - 将下载的插件放入`plugins`目录中（如下所示）
 
 ```bash
-    my_mcdr_server/
+    your_mcdr_server/
     ├─ config/
     ├─ logs/
-    │   └─ MCDR.log
     ├─ plugins/
         ├─ ...
 ++  │   └─ MultiWhitelist-v{x.y.z}.mcdr
     ├─ server/
-        ├─ ...
-        ├─ minecraft_server.jar
-        └─ server.properties
     ├─ config.yml
     └─ permission.yml
 ```
@@ -53,7 +49,7 @@ MultiWhitelist 是一款基于 [MCDReforged](https://mcdreforged.com/) 开发的
 在首次运行之后，插件将会释放配置文件，并存放在`config`目录之中，如下所示。
 
 ```bash
-    my_mcdr_server/config
+    your_mcdr_server/config
     ├── mcdreforged
     │   └── ...
 ++  └── MultiWhitelist
@@ -69,7 +65,7 @@ MultiWhitelist 是一款基于 [MCDReforged](https://mcdreforged.com/) 开发的
 
 #### 启用验证服务
 
-这里以 LittleSkin 的配置文件模板 `littleskin.yml` 举例
+此处使用 **LittleSkin** 的配置文件模板 `littleskin.yml` 为例。
 
 ``` yaml littleskin.yml
 
@@ -85,8 +81,25 @@ yggdrasilAuth:
 
 ```
 
-- `id` 是验证服务使用的序号，从1开始
+- `id` 是验证服务使用的序号，从1开始。
+
+
+当您将配置文件修改完毕后，请将 `littleskin.yml` **移动**或**复制**为以下状态。
+```bash
+    your_mcdr_server/config
+    ├── mcdreforged
+    │   └── ...
+++  └── MultiWhitelist
+        ├── config.json
+        ├── example
+        │   ├── littleskin.yml
+          └── mojang.yml
+        └── service
+        │   ├── littleskin.yml
+```
+
 
 ## 提问前必看
 
 WIP
+在写了
