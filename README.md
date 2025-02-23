@@ -13,6 +13,8 @@ MultiWhitelist 是一款基于 [MCDReforged](https://mcdreforged.com/) 开发的
 - [使用方式](#使用方式)
   - [安装](#安装)
   - [配置](#配置)
+    - [找到配置文件](#找到配置文件)
+    - [启用验证服务](#启用验证服务)
 - [提问前必看](#提问前必看)
 
 ## 使用方式
@@ -44,6 +46,8 @@ MultiWhitelist 是一款基于 [MCDReforged](https://mcdreforged.com/) 开发的
 
 ### 配置
 
+#### 找到配置文件
+
 在安装插件以后，你还需要为插件配置服务。为了方便使用，我们已经提前内置好了模板。
 
 在首次运行之后，插件将会释放配置文件，并存放在`config`目录之中，如下所示。
@@ -60,7 +64,26 @@ MultiWhitelist 是一款基于 [MCDReforged](https://mcdreforged.com/) 开发的
         └── service
 ```
 
-WIP
+- `littleskin.yml` 是 LittleSkin 验证服务的模板
+- `mojang.yml` 是 Mojang 官方正版验证服务的模板
+
+#### 启用验证服务
+
+这里以 LittleSkin 的验证服务举例
+
+``` yaml littleskin.yml
+
+# Please edit before use.
+id: 0
+
+name: 'LittleSkin'
+# Don't change it unless you really want to.
+serviceType: BLESSING_SKIN
+yggdrasilAuth:
+  blessingSkin:
+    apiRoot: 'https://littleskin.cn/api/yggdrasil'
+
+```
 
 ## 提问前必看
 
