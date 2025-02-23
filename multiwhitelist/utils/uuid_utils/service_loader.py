@@ -12,6 +12,7 @@ def load_all_services():
             file_path = os.path.join(SERVICE_DIR, filename)
             with open(file_path, "r", encoding="utf-8") as f:
                 config = yaml.safe_load(f)
+                config["id"] = int(config["id"])
                 api_configs.append(config)
 
     return api_configs
