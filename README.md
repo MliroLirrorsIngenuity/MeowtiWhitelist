@@ -13,7 +13,21 @@ MultiWhitelist 是一款基于 [MCDReforged](https://mcdreforged.com/) 开发的
 > "运营团队，或是帮助你的人，并不是神 "
 > <div style="text-align: right">—— 《LittleSkin 用户使用手册》</div>
 
-在提问之前，请先确保你提供了足够的信息让开发人员
+在提问之前，请确保：
+
+- 已经尝试了所有可能的解决方案
+
+- 已经尝试搜索了解决方案（包括但不限于本仓库的[Issues](https://github.com/MliroLirrorsIngenuity/MultiWhitelist/issues)）
+
+- 你提供了**足够的信息**帮助开发人员定位问题，包括但不限于下列：
+
+  - 服务端日志（MCDR日志、服务端日志等）
+
+  - 插件配置文件
+
+  - 插件列表
+
+  - MCDR版本号、MC服务端版本号和插件版本号
 
 ## 目录
 
