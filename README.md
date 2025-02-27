@@ -8,14 +8,21 @@ MultiWhitelist 是一款基于 [MCDReforged](https://mcdreforged.com/) 开发的
 - 简单一行，管理来自不同 **Yggdrasil** 验证来源的白名单添加。
 - ~~不是哥们谁又手动改`whitelist.json`~~
 
+## 提问前必看
+
+> "运营团队，或是帮助你的人，并不是神 "
+> <div style="text-align: right">—— 《LittleSkin 用户使用手册》</div>
+
+在提问之前，请先确保你提供了足够的信息让开发人员
+
 ## 目录
 
+- [提问前必看](#提问前必看)
 - [使用方式](#使用方式)
   - [安装](#安装)
   - [配置](#配置)
     - [找到配置文件](#找到配置文件)
     - [启用验证服务](#启用验证服务)
-- [提问前必看](#提问前必看)
 
 ## 使用方式
 
@@ -83,9 +90,10 @@ yggdrasilAuth:
 
 - `id` 是验证服务使用的序号，从1开始。
 
-
 当您将配置文件修改完毕后，请将 `littleskin.yml` **移动**或**复制**为以下状态。
-```bash
+
+``` bash
+
     your_mcdr_server/config
     ├── mcdreforged
     │   └── ...
@@ -96,10 +104,5 @@ yggdrasilAuth:
           └── mojang.yml
         └── service
         │   ├── littleskin.yml
+
 ```
-
-
-## 提问前必看
-
-WIP
-在写了
