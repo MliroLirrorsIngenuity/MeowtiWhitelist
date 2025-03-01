@@ -1,77 +1,63 @@
-Currently WIP.
-
 <div align="center">
   <h1 align="center">MultiWhitelist</h1>
   <p align="center">
-    一款基于 <a href="https://mcdreforged.com/"><strong>MCDReforged</strong></a> 开发的多验证服务白名单管理插件。
+    A multiple verification service whitelist management plugin based on <a href="https://mcdreforged.com/"><strong>MCDReforged</strong></a>.
     <br />
     <br />
     <a href="https://github.com/MliroLirrorsIngenuity/MultiWhitelist/README.md">简体中文</a>
     |
-    <a href="https://github.com/MliroLirrorsIngenuity/MultiWhitelist/README_EN.md">English</a>
+    <a href="https://github.com/MliroLirrorsIngenuity/MultiWhitelist/blob/main/docs/README_EN.md">English (You Are Here.)</a>
   </p>
 </div>
 
 <details>
-  <summary>目录</summary>
-  
-  - [特性](#特性)
-  - [使用方式](#使用方式)
-    - [安装](#安装)
-    - [配置&指令](#配置指令)
-  - [提问前必看](#提问前必看)
-  - [贡献者](#贡献者)
-  - [致谢](#致谢)
+  <summary>Table of Contents</summary>
+
+  - [Features](#features)
+  - [Usage](#usage)
+    - [Installation](#installation)
+    - [Configuration & Commands](#configuration--commands)
+  - [Before Asking Questions](#before-asking-questions)
+  - [Contributors](#contributors)
+  - [Acknowledgements](#acknowledgements)
 
 </details>
 
-## 特性
+## Features
 
-  - 解决使用多个不同 **Yggdrasil** 验证服务导致的UUID冲突或不正确的问题。
-  - 使用简单命令，管理来自不同 **Yggdrasil** 验证来源的白名单添加。
-  - 不再需要手动添加正确的UUID到 `whitelist.json` ~~不是哥们谁又手动改`whitelist.json`~~
+- Resolves UUID conflicts or incorrect UUIDs caused by multiple **Yggdrasil** authentication services.
+- Manage whitelists from different **Yggdrasil** sources with simple commands.
+- No manual editing of `whitelist.json` required (~~Who tf edited `whitelist.json` again?~~)
 
-## 使用方式
+## Usage
 
-### 安装
+### Installation
 
-~~把大象装进冰箱需要几步~~
+1. Download the latest version of MultiWhitelist from [GitHub Releases](https://github.com/MliroLirrorsIngenuity/MultiWhitelist/releases).
+2. Place the plugin into MCDR’s `plugins` folder.
+3. [Start the server with MCDReforged](https://docs.mcdreforged.com/zh-cn/latest/quick_start/first_run.html#run).
 
-1. 从 [GitHub Releases](https://github.com/MliroLirrorsIngenuity/MultiWhitelist/releases)中下载最新版本的 MultiWhitelist
-2. 将下载的插件放入MCDR的`plugins`目录中
-3. [通过MCDReforged启动服务器](https://docs.mcdreforged.com/zh-cn/latest/quick_start/first_run.html#run)
+### Configuration & Commands
+See [Wiki](https://github.com/MliroLirrorsIngenuity/MultiWhitelist/wiki).
 
-### 配置&指令
-详见 [Wiki](https://github.com/MliroLirrorsIngenuity/MultiWhitelist/wiki)
+## Before Asking Questions
 
-## 提问前必看
+> "The operating team or your helpers are not gods."
+> <div align="right">—— “LittleSkin User Manual”</div>
 
-> "运营团队，或是帮助你的人，并不是神 "
-> <div align="right"> —— 《LittleSkin 用户使用手册》 </div>
+Please confirm:
 
-在提问之前，请确保：
+- You have tried all possible solutions.
+- You have searched for answers (like checking [Issues](https://github.com/MliroLirrorsIngenuity/MultiWhitelist/issues)).
+- You have provided enough info to help developers find the issue (logs, config files, plugin lists, and version details).
 
-- 已经尝试了所有可能的解决方案
-
-- 已经尝试搜索了解决方案（包括但不限于本仓库的[Issues](https://github.com/MliroLirrorsIngenuity/MultiWhitelist/issues)）
-
-- 你提供了**足够的信息**帮助开发人员定位问题，包括但不限于下列：
-
-  - 服务端日志（MCDR日志、服务端日志等）
-
-  - 插件配置文件
-
-  - 插件列表
-
-  - MCDR 版本号、Minecraft 服务端版本号和插件版本号
-
-## 贡献者
+## Contributors
 <a href="https://github.com/MliroLirrorsIngenuity/MultiWhitelist/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=MliroLirrorsIngenuity/MultiWhitelist" alt="contrib.rocks image" />
 </a>
 
-## 致谢
+## Acknowledgements
 
-[Lazy-Bing-Server/MCDR-offline-whitelist-manager](https://github.com/Lazy-Bing-Server/MCDR-offline-whitelist-manager)：提供了插件主体构建思路
+[Lazy-Bing-Server/MCDR-offline-whitelist-manager](https://github.com/Lazy-Bing-Server/MCDR-offline-whitelist-manager): Provided the base idea.
 
-[CaaMoe/MultiLogin](https://github.com/CaaMoe/MultiLogin)：提供了配置插件的方案灵感
+[CaaMoe/MultiLogin](https://github.com/CaaMoe/MultiLogin): Inspired the configuration approach.
