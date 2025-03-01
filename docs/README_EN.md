@@ -1,3 +1,5 @@
+Currently WIP.
+
 <div align="center">
   <h1 align="center">MultiWhitelist</h1>
   <p align="center">
@@ -6,7 +8,7 @@
     <br />
     <a href="https://github.com/MliroLirrorsIngenuity/MultiWhitelist/README.md">简体中文</a>
     |
-    <a href="https://github.com/MliroLirrorsIngenuity/MultiWhitelist/docs/README_EN.md">English</a>
+    <a href="https://github.com/MliroLirrorsIngenuity/MultiWhitelist/README_EN.md">English</a>
   </p>
 </div>
 
