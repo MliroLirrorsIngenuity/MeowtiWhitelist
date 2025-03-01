@@ -6,7 +6,7 @@
     <br />
     <a href="https://github.com/MliroLirrorsIngenuity/MultiWhitelist/README.md">简体中文</a>
     |
-    <a href="https://github.com/MliroLirrorsIngenuity/MultiWhitelist/docs/README_EN.md">English</a>
+    <a href="https://github.com/MliroLirrorsIngenuity/MultiWhitelist/blob/main/docs/README_EN.md">English</a>
   </p>
 </div>
 
