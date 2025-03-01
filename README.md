@@ -1,12 +1,46 @@
-# MultiWhitelist
+<div align="center">
+  <h1 align="center">MultiWhitelist</h1>
+  <p align="center">
+    一款基于 <a href="https://mcdreforged.com/"><strong>MCDReforged</strong></a> 开发的多验证服务白名单管理插件。
+    <br />
+    <br />
+    <a href="https://github.com/MliroLirrorsIngenuity/MultiWhitelist/README.md">简体中文</a>
+    |
+    <a href="https://github.com/MliroLirrorsIngenuity/MultiWhitelist/README_EN.md">English</a>
+  </p>
+</div>
 
-MultiWhitelist 是一款基于 [MCDReforged](https://mcdreforged.com/) 开发的多验证服务白名单管理插件。
+<details>
+  <summary>目录</summary>
+  
+  - [特性](#特性)
+  - [使用方式](#使用方式)
+    - [安装](#安装)
+    - [配置&指令](#配置指令)
+  - [提问前必看](#提问前必看)
+  - [贡献者](#贡献者)
+  - [致谢](#致谢)
 
-使用本插件，可以：
+</details>
 
-- 解决使用多个不同 Yggdrasil 验证服务导致的UUID冲突或不同的问题。
-- 简单一行，管理来自不同 **Yggdrasil** 验证来源的白名单添加。
-- ~~不是哥们谁又手动改`whitelist.json`~~
+## 特性
+
+  - 解决使用多个不同 **Yggdrasil** 验证服务导致的UUID冲突或不正确的问题。
+  - 使用简单命令，管理来自不同 **Yggdrasil** 验证来源的白名单添加。
+  - 不再需要手动添加正确的UUID到 `whitelist.json` ~~不是哥们谁又手动改`whitelist.json`~~
+
+## 使用方式
+
+### 安装
+
+~~把大象装进冰箱需要几步~~
+
+1. 从 [GitHub Releases](https://github.com/MliroLirrorsIngenuity/MultiWhitelist/releases)中下载最新版本的 MultiWhitelist
+2. 将下载的插件放入MCDR的`plugins`目录中
+3. [通过MCDReforged启动服务器](https://docs.mcdreforged.com/zh-cn/latest/quick_start/first_run.html#run)
+
+### 配置&指令
+详见 [Wiki](https://github.com/MliroLirrorsIngenuity/MultiWhitelist/wiki)
 
 ## 提问前必看
 
@@ -27,96 +61,15 @@ MultiWhitelist 是一款基于 [MCDReforged](https://mcdreforged.com/) 开发的
 
   - 插件列表
 
-  - MCDR版本号、MC服务端版本号和插件版本号
+  - MCDR 版本号、Minecraft 服务端版本号和插件版本号
 
-## 目录
+## 贡献者
+<a href="https://github.com/MliroLirrorsIngenuity/MultiWhitelist/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=MliroLirrorsIngenuity/MultiWhitelist" alt="contrib.rocks image" />
+</a>
 
-- [提问前必看](#提问前必看)
-- [使用方式](#使用方式)
-  - [安装](#安装)
-  - [配置](#配置)
-    - [找到配置文件](#找到配置文件)
-    - [启用验证服务](#启用验证服务)
+## 致谢
 
-## 使用方式
+[Lazy-Bing-Server/MCDR-offline-whitelist-manager](https://github.com/Lazy-Bing-Server/MCDR-offline-whitelist-manager)：提供了插件主体构建思路
 
-### 安装
-
-~~把大象装进冰箱需要几步~~
-
-- 从 [GitHub Releases](https://github.com/MliroLirrorsIngenuity/MultiWhitelist/releases)中下载最新版本的MultiWhitelist
-- 将下载的插件放入`plugins`目录中（如下所示）
-
-```bash
-    your_mcdr_server/
-    ├─ config/
-    ├─ logs/
-    ├─ plugins/
-        ├─ ...
-++  │   └─ MultiWhitelist-v{x.y.z}.mcdr
-    ├─ server/
-    ├─ config.yml
-    └─ permission.yml
-```
-
-- [通过MCDReforged启动服务器](https://docs.mcdreforged.com/zh-cn/latest/quick_start/first_run.html#run)
-
-### 配置
-
-#### 找到配置文件
-
-在安装插件以后，你还需要为插件配置服务。为了方便使用，我们已经提前内置好了主要验证方式的模板。
-
-在首次运行之后，插件将会释放配置文件，并存放在`config`目录之中，如下所示。
-
-```bash
-    your_mcdr_server/config
-    ├── mcdreforged
-    │   └── ...
-++  └── MultiWhitelist
-        ├── config.json
-        ├── example
-        │   ├── littleskin.yml
-        │   └── mojang.yml
-        └── service
-```
-
-- `littleskin.yml` 是 LittleSkin 验证服务的模板
-- `mojang.yml` 是 Mojang 官方正版验证服务的模板
-
-#### 启用验证服务
-
-此处使用 **LittleSkin** 的配置文件模板 `littleskin.yml` 为例。
-
-``` yaml littleskin.yml
-
-# Please edit before use.
-id: 0
-
-name: 'LittleSkin'
-# Don't change it unless you really want to.
-serviceType: BLESSING_SKIN
-yggdrasilAuth:
-  blessingSkin:
-    apiRoot: 'https://littleskin.cn/api/yggdrasil'
-
-```
-
-- `id` 是验证服务使用的序号，从1开始。
-
-当您将配置文件修改完毕后，请将 `littleskin.yml` **移动**或**复制**为以下状态。
-
-``` bash
-
-    your_mcdr_server/config
-    ├── mcdreforged
-    │   └── ...
-++  └── MultiWhitelist
-        ├── config.json
-        ├── example
-        │   ├── littleskin.yml
-          └── mojang.yml
-        └── service
-        │   ├── littleskin.yml
-
-```
+[CaaMoe/MultiLogin](https://github.com/CaaMoe/MultiLogin)：提供了配置插件的方案灵感
