@@ -11,7 +11,7 @@ MultiWhitelist 是一款基于 [MCDReforged](https://mcdreforged.com/) 开发的
 ## 提问前必看
 
 > "运营团队，或是帮助你的人，并不是神 "
-> <div style="text-align: right">—— 《LittleSkin 用户使用手册》</div>
+ <div align="right"> —— 《LittleSkin 用户使用手册》 </div>
 
 在提问之前，请确保：
 
