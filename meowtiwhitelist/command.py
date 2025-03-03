@@ -1,6 +1,6 @@
 from mcdreforged.api.all import *
 
-from meowtiwhitelist.constants import PREFIX
+from meowtiwhitelist.constants import PREFIX, VERSION
 from meowtiwhitelist.utils.config_utils import config
 from meowtiwhitelist.utils.logger_utils import log, log_available_apis
 from meowtiwhitelist.utils.translater_utils import tr
@@ -12,7 +12,7 @@ def register_command(server: PluginServerInterface):
         return Literal(literal)
 
     def show_help(src: CommandSource):
-        log(src, tr("help_msg", PREFIX))
+        log(src, tr("help_msg", PREFIX, VERSION))
         log_available_apis(src)
 
     server.register_command(
