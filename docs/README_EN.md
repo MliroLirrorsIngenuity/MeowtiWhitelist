@@ -15,6 +15,7 @@
 
   - [Features](#features)
   - [Usage](#usage)
+    - [Requirements](#requirements)
     - [Installation](#installation)
     - [Configuration & Commands](#configuration--commands)
   - [Before Asking Questions](#before-asking-questions)
