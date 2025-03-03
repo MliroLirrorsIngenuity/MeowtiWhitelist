@@ -6,7 +6,7 @@
     <br />
     <a href="https://github.com/MliroLirrorsIngenuity/MeowtiWhitelist/README.md">简体中文</a>
     |
-    <a href="https://github.com/MliroLirrorsIngenuity/MeowtiWhitelist/README_EN.md">English</a>
+    <a href="https://github.com/MliroLirrorsIngenuity/MeowtiWhitelist/blob/main/README_EN.md">English</a>
   </p>
 </div>
 
