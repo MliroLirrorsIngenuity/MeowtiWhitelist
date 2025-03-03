@@ -2,8 +2,8 @@ meowtiwhitelist:
   help_msg_name: 'Yggdrasil Whitelist Management Plugin'
   help_msg: |
     ============== MeowtiWhitelist v{1} ==============
-    §7{0} add §e[name] §b(API num/name)§r    Add to whitelist
-    §7{0} remove §e[name]§r    Remove from whitelist
+    §7{0} add §e<player_name> §b<API_id/name>§r    Add to whitelist
+    §7{0} remove §e<player_name>§r    Remove from whitelist
     §7{0} list§r    Show the full whitelist
     §7{0} help§r    Show this help message
   available_apis:
