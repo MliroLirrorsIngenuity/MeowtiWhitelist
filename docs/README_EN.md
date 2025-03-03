@@ -1,7 +1,7 @@
 <div align="center">
   <h1 align="center">MeowtiWhitelist</h1>
   <p align="center">
-    A multiple verification service whitelist management plugin based on <a href="https://mcdreforged.com/"><strong>MCDReforged</strong></a>.
+        A multiple verification service whitelist management plugin based on <a href="https://mcdreforged.com/"><strong>MCDReforged</strong></a>, solving whitelist issues in a multi-verification service environment.
     <br />
     <br />
     <a href="https://github.com/MliroLirrorsIngenuity/MeowtiWhitelist/README.md">简体中文</a>
@@ -27,15 +27,24 @@
 
 - Resolves UUID conflicts or incorrect UUIDs caused by multiple **Yggdrasil** authentication services.
 - Manage whitelists from different **Yggdrasil** sources with simple commands.
-- No manual editing of `whitelist.json` required (~~Who tf edited `whitelist.json` again?~~)
+- No manual editing of the correct UUID from the corresponding authentication source in `whitelist.json` required (~~Who tf edited `whitelist.json` again?~~)
 
 ## Usage
+
+### Requirements
+
+`MCDReforged`>=2.12.0
+
+`requests`>=2.31.0
+
+`PyYAML`>=6.0.2
 
 ### Installation
 
 1. Download the latest version of MeowtiWhitelist from [GitHub Releases](https://github.com/MliroLirrorsIngenuity/MeowtiWhitelist/releases).
 2. Place the plugin into MCDR’s `plugins` folder.
-3. [Start the server with MCDReforged](https://docs.mcdreforged.com/zh-cn/latest/quick_start/first_run.html#run).
+3. Install the [requirements](#requirements).
+4. [Start the server with MCDReforged](https://docs.mcdreforged.com/zh-cn/latest/quick_start/first_run.html#run).
 
 ### Configuration & Commands
 See [Wiki](https://github.com/MliroLirrorsIngenuity/MeowtiWhitelist/wiki).

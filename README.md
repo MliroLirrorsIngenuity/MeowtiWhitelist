@@ -1,7 +1,7 @@
 <div align="center">
   <h1 align="center">MeowtiWhitelist</h1>
   <p align="center">
-    一款基于 <a href="https://mcdreforged.com/"><strong>MCDReforged</strong></a> 开发的多验证服务白名单管理插件。
+    一款基于 <a href="https://mcdreforged.com/"><strong>MCDReforged</strong></a> 开发的多验证服务白名单管理插件，解决多验证服务环境下的白名单问题。
     <br />
     <br />
     <a href="https://github.com/MliroLirrorsIngenuity/MeowtiWhitelist/README.md">简体中文</a>
@@ -27,9 +27,17 @@
 
   - 解决使用多个不同 **Yggdrasil** 验证服务导致的UUID冲突或不正确的问题。
   - 使用简单命令，管理来自不同 **Yggdrasil** 验证来源的白名单添加。
-  - 不再需要手动添加正确的UUID到 `whitelist.json` ~~不是哥们谁又手动改`whitelist.json`~~
+  - 不再需要手动添加对应验证来源的正确UUID到 `whitelist.json` ~~不是哥们谁又手动改`whitelist.json`~~
 
 ## 使用方式
+
+### 依赖
+
+`MCDReforged`>=2.12.0
+
+`requests`>=2.31.0
+
+`PyYAML`>=6.0.2
 
 ### 安装
 
@@ -37,7 +45,8 @@
 
 1. 从 [GitHub Releases](https://github.com/MliroLirrorsIngenuity/MeowtiWhitelist/releases)中下载最新版本的 MeowtiWhitelist
 2. 将下载的插件放入MCDR的`plugins`目录中
-3. [通过MCDReforged启动服务器](https://docs.mcdreforged.com/zh-cn/latest/quick_start/first_run.html#run)
+3. 安装所需的[依赖](#依赖)
+4. [通过MCDReforged启动服务器](https://docs.mcdreforged.com/zh-cn/latest/quick_start/first_run.html#run)
 
 ### 配置&指令
 详见 [Wiki](https://github.com/MliroLirrorsIngenuity/MeowtiWhitelist/wiki)
