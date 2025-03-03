@@ -53,7 +53,7 @@ Please confirm:
 
 ## Contributors
 <a href="https://github.com/MliroLirrorsIngenuity/MeowtiWhitelist/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=MliroLirrorsIngenuity/MeowtiWhitelist" alt="contrib.rocks image" />
+  <img src="https://contrib.rocks/image?repo=MliroLirrorsIngenuity/MeowtiWhitelist&" alt="Contributors" />
 </a>
 
 ## Acknowledgements
