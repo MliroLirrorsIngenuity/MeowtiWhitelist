@@ -2,7 +2,10 @@
     "id": "meowtiwhitelist",
     "version": "2.0.2",
     "name": "MeowtiWhitelist",
-    "description": "A MCDR plugin that can manage the whitelist of a Minecraft server using the multiple Yggdrasil API.",
+    "description": {
+        "en_us": "A plugin that can manage the whitelist with multiple Yggdrasil APIs.",
+        "zh_cn": "一个多验证服务(Yggdrasil)白名单管理插件。"
+    },
     "author": [
         "Lemon-miaow"
     ],
