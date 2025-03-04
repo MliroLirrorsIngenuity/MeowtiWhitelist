@@ -1,6 +1,6 @@
 {
     "id": "meowtiwhitelist",
-    "version": "2.0.2",
+    "version": "2.0.3",
     "name": "MeowtiWhitelist",
     "description": {
         "en_us": "A plugin that can manage the whitelist with multiple Yggdrasil APIs.",
