@@ -6,7 +6,7 @@ from meowtiwhitelist.utils.uuid_utils.service_loader import api_services
 
 def log(source: CommandSource,text):
     text = RTextList(text)
-    source.get_server().broadcast(text)
+    source.reply(text)
 
 
 def log_available_apis(src):
