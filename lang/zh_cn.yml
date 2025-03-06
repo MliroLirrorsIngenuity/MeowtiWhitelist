@@ -27,3 +27,6 @@ meowtiwhitelist:
     unknown_error: "§c添加玩家 {0} 白名单时出现错误或用户不存在，请重试"
     api_not_configure: "§cAPI 配置错误"
     api_status_code: "§cAPI 请求失败，状态码：{0}"
+    conflict_header: "§cAPI 配置冲突："
+    conflict_id: "§c- API ID {0} 在{1}文件中重复"
+    conflict_name: "§c- API 名称 {0} 在{1}文件中重复"

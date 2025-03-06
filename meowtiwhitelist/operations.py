@@ -4,8 +4,8 @@ from mcdreforged.plugin.si.plugin_server_interface import PluginServerInterface
 from mcdreforged.plugin.si.server_interface import ServerInterface
 
 from meowtiwhitelist.utils.config_utils import server_dirname
-from meowtiwhitelist.utils.logger_utils import log, log_available_apis
-from meowtiwhitelist.utils.uuid_utils.service_loader import build_service_mapping
+from meowtiwhitelist.utils.logger_utils import log, log_available_apis, log_conflict_errors
+from meowtiwhitelist.utils.uuid_utils.service_loader import build_service_mapping, service_conflicts
 from meowtiwhitelist.utils.uuid_utils.uuid_utils import fetchers
 from meowtiwhitelist.utils.translater_utils import tr
 from meowtiwhitelist.utils.file_utils import (
@@ -30,6 +30,10 @@ def create_whitelist_file(json_list: list, workpath: str, type: str):
 
 
 def add_whitelist(src, player_name: str, api: str):
+    if service_conflicts:
+        log_conflict_errors(src, service_conflicts)
+        return
+
     player_name = player_name.strip()
     if not player_name:
         log(src, tr("error.empty_username"))

@@ -27,3 +27,6 @@ meowtiwhitelist:
     unknown_error: "§cFailed to add player {0} to the whitelist. The user may not exist. Please try again."
     api_not_configure: "§cAPI configuration error"
     api_status_code: "§cAPI request failed, status code: {0}"
+    conflict_header: "§cAPI configuration conflict:"
+    conflict_id: "§c- API ID {0} is duplicated in the {1} file"
+    conflict_name: "§c- API name {0} is duplicated in the {1} file"

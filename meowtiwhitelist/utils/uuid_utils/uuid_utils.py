@@ -2,7 +2,6 @@ import requests
 import re
 from typing import Optional, Dict
 
-from meowtiwhitelist.utils.logger_utils import *
 from meowtiwhitelist.utils.uuid_utils.service_loader import api_services
 
 _UUID_PATTERN = re.compile(
@@ -47,8 +46,7 @@ class UUIDFetcher:
             if service_type == "MOJANG":
                 fetchers[service_id] = get_mojang_uuid
             elif service_type == "BLESSING_SKIN":
-                    fetchers[service_id] = lambda username: get_blessing_skin_uuid(username, api_root)
-
+                fetchers[service_id] = lambda username, root=api_root: get_blessing_skin_uuid(username, root)
         return fetchers
 
 fetchers = UUIDFetcher.create_fetchers(api_services)
