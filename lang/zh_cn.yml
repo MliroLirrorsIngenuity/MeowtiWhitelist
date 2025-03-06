@@ -6,6 +6,7 @@ meowtiwhitelist:
     §7{0} remove §e<玩家名称>§r    移除白名单
     §7{0} list§r    显示完整白名单
     §7{0} help§r    显示此帮助信息
+    §7{0} reload§r    重新加载插件配置及白名单
   available_apis:
     header: "§a===== 【API 可用选项】 ====="
     item: "§e{0} = §b{1}§r"
@@ -14,6 +15,7 @@ meowtiwhitelist:
   success:
     add: "§a已添加 {0} 到白名单"
     remove: "§a已移除 {0} 白名单"
+    reload: "§a已重新加载插件配置及白名单"
   error:
     permission_denied: "§c权限不足"
     add_require_name: "§c玩家名不能为空，正确用法： §r{0} add §e[name] §b(API num/name)§r"

@@ -6,6 +6,7 @@ meowtiwhitelist:
     §7{0} remove §e<player_name>§r    Remove from whitelist
     §7{0} list§r    Show the full whitelist
     §7{0} help§r    Show this help message
+    §7{0} reload§r    Reload plugin configuration and whitelist
   available_apis:
     header: "§a===== [Available API options] ====="
     item: "§e{0} = §b{1}§r"
@@ -14,6 +15,7 @@ meowtiwhitelist:
   success:
     add: "§a{0} has been added to the whitelist"
     remove: "§a{0} has been removed from the whitelist"
+    reload: "§aPlugin configuration and whitelist reloaded"
   error:
     permission_denied: "§cPermission denied"
     add_require_name: "§cPlayer name cannot be empty. Correct usage: §r{0} add §e[name] §b(API num/name)§r"

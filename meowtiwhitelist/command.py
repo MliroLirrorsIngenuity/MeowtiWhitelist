@@ -4,7 +4,7 @@ from meowtiwhitelist.constants import PREFIX, VERSION
 from meowtiwhitelist.utils.config_utils import config
 from meowtiwhitelist.utils.logger_utils import log, log_available_apis
 from meowtiwhitelist.utils.translater_utils import tr
-from meowtiwhitelist.operations import add_whitelist, remove_whitelist, list_whitelist
+from meowtiwhitelist.operations import add_whitelist, remove_whitelist, list_whitelist, reload_plugin
 
 
 def register_command(server: PluginServerInterface):
@@ -53,5 +53,9 @@ def register_command(server: PluginServerInterface):
         .then(
             get_literal_node("list")
             .runs(lambda src: list_whitelist(src))
+        )
+        .then(
+            get_literal_node("reload")
+            .runs(lambda src: reload_plugin(src, server))
         )
     )

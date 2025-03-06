@@ -1,5 +1,8 @@
 import time
 
+from mcdreforged.plugin.si.plugin_server_interface import PluginServerInterface
+from mcdreforged.plugin.si.server_interface import ServerInterface
+
 from meowtiwhitelist.utils.config_utils import server_dirname
 from meowtiwhitelist.utils.logger_utils import log, log_available_apis
 from meowtiwhitelist.utils.uuid_utils.service_loader import build_service_mapping
@@ -86,6 +89,12 @@ def list_whitelist(src):
     for i, entry in enumerate(whitelist_list, 1):
         player_name, player_uuid = entry['name'], entry['uuid']
         log(src, f'{i}: {player_name} - {player_uuid}')
+
+
+def reload_plugin(src, server: PluginServerInterface):
+    ServerInterface.reload_plugin(server, "meowtiwhitelist")
+    server_cmd(src, '/whitelist reload')
+    log(src, tr("success.reload"))
 
 
 def server_cmd(src, command: str):
