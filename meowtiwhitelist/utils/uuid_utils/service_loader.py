@@ -27,6 +27,8 @@ def load_all_services():
                 if service_name:
                     name_to_files[service_name].append(filename)
 
+    api_configs.sort(key=lambda x: x.get('id', 0))
+
     conflicts = []
     for service_id, files in id_to_files.items():
         if len(files) > 1:
