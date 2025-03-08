@@ -68,7 +68,7 @@ def add_whitelist(src, player_name: str, api: str):
             whitelist_list.append(new_whitelist_dict)
             create_whitelist_file(whitelist_list, server_dirname, '_A_')
             time.sleep(1)
-            server_cmd(src, '/whitelist reload')
+            server_cmd(src, 'whitelist reload')
             log(src, tr("success.add", player_name))
         else:
             log(src, tr("error.unknown_error", player_name))
@@ -97,7 +97,7 @@ def list_whitelist(src):
 
 def reload_plugin(src, server: PluginServerInterface):
     ServerInterface.reload_plugin(server, "meowtiwhitelist")
-    server_cmd(src, '/whitelist reload')
+    server_cmd(src, 'whitelist reload')
     log(src, tr("success.reload"))
 
 
