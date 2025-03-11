@@ -1,6 +1,6 @@
 import requests
 import re
-from typing import Optional, Dict
+from typing import Optional, Dict, Union
 
 from meowtiwhitelist.utils.uuid_utils.service_loader import api_services
 
@@ -23,7 +23,7 @@ def get_mojang_uuid(username: str) -> Optional[str]:
         return _format_uuid(response.json().get("id", ""))
     return None
 
-def get_blessing_skin_uuid(username: str, api_root: str) -> int | str | None:
+def get_blessing_skin_uuid(username: str, api_root: str) -> Union[int, str, None]:
     url = f"{api_root}/api/profiles/minecraft"
     response = requests.post(url, json=[username], timeout=5)
     if response.status_code == 200:
