@@ -30,3 +30,8 @@ meowtiwhitelist:
     conflict_header: "§cAPI configuration conflict:"
     conflict_id: "§c- API ID {0} is duplicated in the {1} file"
     conflict_name: "§c- API name {0} is duplicated in the {1} file"
+  api:
+    error:
+      not_configured: "§cAPI Error: Service ID {0} not found in fetchers."
+      status_code: "§API Error: Failed to fetch UUID for {0}, status code: {1}"
+      unknown_error: "§cAPI Error: Unknown error while fetching UUID for {0}"
