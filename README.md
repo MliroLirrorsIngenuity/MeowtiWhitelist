@@ -4,7 +4,7 @@
     一款基于 <a href="https://mcdreforged.com/"><strong>MCDReforged</strong></a> 开发的多验证服务白名单管理插件，解决多验证服务环境下的白名单问题。
     <br />
     <br />
-    <a href="https://github.com/MliroLirrorsIngenuity/MeowtiWhitelist/README.md">简体中文</a>
+    <a href="https://github.com/MliroLirrorsIngenuity/MeowtiWhitelist/blob/main/README.md">简体中文</a>
     |
     <a href="https://github.com/MliroLirrorsIngenuity/MeowtiWhitelist/blob/main/README_EN.md">English</a>
   </p>
@@ -83,3 +83,5 @@
 [Lazy-Bing-Server/MCDR-offline-whitelist-manager](https://github.com/Lazy-Bing-Server/MCDR-offline-whitelist-manager)：提供了插件主体构建思路
 
 [CaaMoe/MultiLogin](https://github.com/CaaMoe/MultiLogin)：提供了配置插件的方案灵感
+
+[LittleSkinChina/manual-ng](https://github.com/LittleSkinChina/manual-ng)：提供了提问前必看的内容灵感 (CC-BY-SA 4.0)
