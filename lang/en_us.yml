@@ -2,15 +2,15 @@ meowtiwhitelist:
   help_msg_name: 'Yggdrasil Whitelist Management Plugin'
   help_msg: |
     ============== MeowtiWhitelist v{1} ==============
-    §7{0} add §e<player_name> §b<API_id/name>§r    Add to whitelist
+    §7{0} add §e<player_name> §b<Service id/name>§r    Add to whitelist
     §7{0} remove §e<player_name>§r    Remove from whitelist
     §7{0} list§r    Show the full whitelist
     §7{0} help§r    Show this help message
     §7{0} reload§r    Reload plugin configuration and whitelist
-  available_apis:
-    header: "§a===== [Available API options] ====="
+  available_services:
+    header: "§a===== [Available Service options] ====="
     item: "§e{0} = §b{1}§r"
-    none: "§cNo available APIs"
+    none: "§cNo available Service"
   list: "§a===== Whitelist ====="
   success:
     add: "§a{0} has been added to the whitelist"
@@ -18,15 +18,15 @@ meowtiwhitelist:
     reload: "§aPlugin configuration and whitelist reloaded"
   error:
     permission_denied: "§cPermission denied"
-    add_require_name: "§cPlayer name cannot be empty. Correct usage: §r{0} add §e[name] §b(API num/name)§r"
-    remove_require_name: "§cPlayer name cannot be empty. Correct usage: §r{0} remove §e[name]§r"
+    add_require_name: "§cPlayer name cannot be empty. Correct usage: §r{0} add §e[Player name] §b(Service id/name)§r"
+    remove_require_name: "§cPlayer name cannot be empty. Correct usage: §r{0} remove §e[Player name]§r"
     not_found: "§cPlayer {0} is not on the whitelist"
     duplicate_name: "§cPlayer {0} is already on the whitelist"
-    require_api: "§cAPI cannot be empty. Correct usage: §r{0} add §e[name] §b(API num/name)§r"
-    invalid_api: "§cInvalid API"
+    require_service: "§cService cannot be empty. Correct usage: §r{0} add §e[Player name] §b(Service id/name)§r"
+    invalid_service: "§cInvalid Service"
     unknown_error: "§cFailed to add player {0} to the whitelist. The user may not exist. Please try again."
-    api_not_configure: "§cAPI configuration error"
-    api_status_code: "§cAPI request failed, status code: {0}"
-    conflict_header: "§cAPI configuration conflict:"
-    conflict_id: "§c- API ID {0} is duplicated in the {1} file"
-    conflict_name: "§c- API name {0} is duplicated in the {1} file"
+    service_not_configure: "§cService configuration error"
+    service_status_code: "§cService request failed, status code: {0}"
+    conflict_header: "§cService configuration conflict:"
+    conflict_id: "§c- Service ID {0} is duplicated in the {1} file"
+    conflict_name: "§c- Service name {0} is duplicated in the {1} file"

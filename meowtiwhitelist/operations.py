@@ -4,7 +4,7 @@ from mcdreforged.plugin.si.plugin_server_interface import PluginServerInterface
 from mcdreforged.plugin.si.server_interface import ServerInterface
 
 from meowtiwhitelist.utils.config_utils import server_dirname
-from meowtiwhitelist.utils.logger_utils import log, log_available_apis, log_conflict_errors
+from meowtiwhitelist.utils.logger_utils import log, log_available_services, log_conflict_errors
 from meowtiwhitelist.utils.uuid_utils.service_loader import build_service_mapping, service_conflicts
 from meowtiwhitelist.utils.uuid_utils.uuid_utils import fetchers
 from meowtiwhitelist.utils.translater_utils import tr
@@ -29,7 +29,7 @@ def create_whitelist_file(json_list: list, workpath: str, type: str):
     clean_old_backups(backup_dir)
 
 
-def add_whitelist(src, player_name: str, api: str):
+def add_whitelist(src, player_name: str, service_id: str):
     if service_conflicts:
         log_conflict_errors(src, service_conflicts)
         return
@@ -40,17 +40,17 @@ def add_whitelist(src, player_name: str, api: str):
         return
 
     service_map = build_service_mapping()
-    normalized_api = api.strip().lower()
+    normalized_service = service_id.strip().lower()
 
-    if normalized_api not in service_map:
-        log(src, tr("error.invalid_api"))
-        log_available_apis(src)
+    if normalized_service not in service_map:
+        log(src, tr("error.invalid_service"))
+        log_available_services(src)
         return
 
-    service_id = service_map[normalized_api]
+    service_id = service_map[normalized_service]
 
     if (uuid_func := fetchers.get(service_id)) is None:
-        log(src, tr("error.api_not_configured", service_id))
+        log(src, tr("error.service_not_configured", service_id))
         return
 
     whitelist_path = get_whitelist_path(server_dirname)
@@ -62,7 +62,7 @@ def add_whitelist(src, player_name: str, api: str):
     else:
         uuid = uuid_func(player_name)
         if isinstance(uuid, int):
-            log(src, tr("error.api_status_code", uuid))
+            log(src, tr("error.service_status_code", uuid))
         elif uuid is not None:
             new_whitelist_dict = {'uuid': uuid, 'name': player_name}
             whitelist_list.append(new_whitelist_dict)

@@ -9,7 +9,7 @@ def load_all_services():
     if not os.path.exists(SERVICE_DIR):
         os.makedirs(SERVICE_DIR, exist_ok=True)
 
-    api_configs = []
+    service_configs = []
     id_to_files = defaultdict(list)
     name_to_files = defaultdict(list)
 
@@ -22,12 +22,12 @@ def load_all_services():
                 service_id = config["id"]
                 service_name = config.get("name", "").strip().lower()
 
-                api_configs.append(config)
+                service_configs.append(config)
                 id_to_files[service_id].append(filename)
                 if service_name:
                     name_to_files[service_name].append(filename)
 
-    api_configs.sort(key=lambda x: x.get('id', 0))
+    service_configs.sort(key=lambda x: x.get('id', 0))
 
     conflicts = []
     for service_id, files in id_to_files.items():
@@ -45,15 +45,15 @@ def load_all_services():
                 'files': files.copy()
             })
 
-    return api_configs, conflicts
+    return service_configs, conflicts
 
 
-api_services, service_conflicts = load_all_services()
+services, service_conflicts = load_all_services()
 
 
 def build_service_mapping() -> dict:
     service_map = {}
-    for service in api_services:
+    for service in services:
         if (service_id := service.get('id', -1)) <= 0:
             continue
 

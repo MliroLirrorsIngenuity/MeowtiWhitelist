@@ -2,7 +2,7 @@ from mcdreforged.api.all import *
 
 from meowtiwhitelist.constants import PREFIX, VERSION
 from meowtiwhitelist.utils.config_utils import config
-from meowtiwhitelist.utils.logger_utils import log, log_available_apis
+from meowtiwhitelist.utils.logger_utils import log, log_available_services
 from meowtiwhitelist.utils.translater_utils import tr
 from meowtiwhitelist.operations import add_whitelist, remove_whitelist, list_whitelist, reload_plugin
 
@@ -13,7 +13,7 @@ def register_command(server: PluginServerInterface):
 
     def show_help(src: CommandSource):
         log(src, tr("help_msg", PREFIX, VERSION))
-        log_available_apis(src)
+        log_available_services(src)
 
     server.register_command(
         Literal(PREFIX)
@@ -32,9 +32,9 @@ def register_command(server: PluginServerInterface):
             get_literal_node("add")
             .runs(lambda src: log(src, tr("error.add_require_name", PREFIX)))
             .then(
-                Text("player_name").runs(lambda src: log(src, tr("error.require_api", PREFIX)))
+                Text("player_name").runs(lambda src: log(src, tr("error.require_service", PREFIX)))
                 .then(
-                    Text("api").runs(lambda src, ctx: add_whitelist(src, ctx["player_name"], ctx["api"]))
+                    Text("service").runs(lambda src, ctx: add_whitelist(src, ctx["player_name"], ctx["service"]))
                     .on_error(
                         RequirementNotMet,
                         lambda src, ctx: log(src, tr("error.unknown_error", ctx["player_name"])),

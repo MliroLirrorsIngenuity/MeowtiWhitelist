@@ -2,7 +2,7 @@ import requests
 import re
 from typing import Optional, Dict, Union
 
-from meowtiwhitelist.utils.uuid_utils.service_loader import api_services
+from meowtiwhitelist.utils.uuid_utils.service_loader import services
 
 _UUID_PATTERN = re.compile(
     r"([a-fA-F0-9]{8})"
@@ -36,9 +36,9 @@ def get_blessing_skin_uuid(username: str, api_root: str) -> Union[int, str, None
 
 class UUIDFetcher:
     @staticmethod
-    def create_fetchers(api_services) -> Dict[int, callable]:
+    def create_fetchers(services) -> Dict[int, callable]:
         fetchers = {}
-        for service in api_services:
+        for service in services:
             service_id = service.get("id", -1)
             service_type = service.get("serviceType", "").upper()
             api_root = service.get("yggdrasilAuth", {}).get("blessingSkin", {}).get("apiRoot", "")
@@ -49,4 +49,4 @@ class UUIDFetcher:
                 fetchers[service_id] = lambda username, root=api_root: get_blessing_skin_uuid(username, root)
         return fetchers
 
-fetchers = UUIDFetcher.create_fetchers(api_services)
+fetchers = UUIDFetcher.create_fetchers(services)

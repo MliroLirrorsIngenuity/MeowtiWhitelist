@@ -1,7 +1,7 @@
 from mcdreforged.api.all import *
 
 from meowtiwhitelist.utils.translater_utils import tr
-from meowtiwhitelist.utils.uuid_utils.service_loader import api_services, service_conflicts
+from meowtiwhitelist.utils.uuid_utils.service_loader import services, service_conflicts
 
 
 def log(source: CommandSource,text):
@@ -9,20 +9,20 @@ def log(source: CommandSource,text):
     source.reply(text)
 
 
-def log_available_apis(src):
+def log_available_services(src):
     if service_conflicts:
         log_conflict_errors(src, service_conflicts)
         return
 
-    log(src, tr("available_apis.header"))
-    valid_services = [s for s in api_services if s.get('id', -1) > 0]
+    log(src, tr("available_services.header"))
+    valid_services = [s for s in services if s.get('id', -1) > 0]
 
     if not valid_services:
-        log(src, tr("available_apis.none"))
+        log(src, tr("available_services.none"))
         return
 
     for service in valid_services:
-        log(src, tr("available_apis.item", service['name'], service['id']))
+        log(src, tr("available_services.item", service['name'], service['id']))
 
 
 def log_conflict_errors(src, conflicts):
