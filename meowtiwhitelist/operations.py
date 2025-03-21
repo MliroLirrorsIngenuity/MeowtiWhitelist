@@ -29,6 +29,27 @@ def create_whitelist_file(json_list: list, workpath: str, type: str):
     clean_old_backups(backup_dir)
 
 
+def add_whitelist_direct(src, player_name: str, uuid: str):
+    player_name = player_name.strip()
+    if not player_name:
+        log(src, tr("error.empty_username"))
+        return
+
+    whitelist_path = get_whitelist_path(server_dirname)
+    whitelist_list: list = json_file_to_list(whitelist_path)
+    whitelist_name_list = {entry['name'] for entry in whitelist_list}
+
+    if player_name in whitelist_name_list:
+        log(src, tr("error.duplicate_name", player_name))
+    else:
+        new_whitelist_dict = {'uuid': uuid, 'name': player_name}
+        whitelist_list.append(new_whitelist_dict)
+        create_whitelist_file(whitelist_list, server_dirname, '_A_')
+        time.sleep(1)
+        server_cmd(src, 'whitelist reload')
+        log(src, tr("success.add", player_name))
+
+
 def add_whitelist(src, player_name: str, service_id: str):
     if service_conflicts:
         log_conflict_errors(src, service_conflicts)

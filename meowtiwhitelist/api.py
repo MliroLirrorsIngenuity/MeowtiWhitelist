@@ -1,4 +1,5 @@
 from meowtiwhitelist.operations import (
+    add_whitelist_direct as _raw_add_whitelist_direct,
     add_whitelist as _raw_add_whitelist,
     remove_whitelist as _raw_remove_whitelist
 )
@@ -18,6 +19,19 @@ def get_player_uuid(player_name: str, service_id: str):
         str: The UUID of the player.
     """
     return fetchers[build_service_mapping()[service_id.strip().lower()]](player_name)
+
+
+def add_whitelist_direct(src, player_name: str, uuid: str):
+    """
+    Add a player to the whitelist using the specified UUID.
+    This is a direct method, it does not check for UUID validity.
+
+    Args:
+        src: The source of the command (e.g., console or player).
+        player_name (str): The name of the player to add to the whitelist.
+        uuid (str): The UUID of the player.
+    """
+    _raw_add_whitelist_direct(src, player_name, uuid)
 
 
 def add_whitelist(src, player_name: str, service_id: str):
