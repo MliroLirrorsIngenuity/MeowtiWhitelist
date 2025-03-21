@@ -24,7 +24,7 @@ def get_player_uuid(player_name: str, service_id: str):
 def add_whitelist_direct(src, player_name: str, uuid: str):
     """
     Add a player to the whitelist using the specified UUID.
-    This is a direct method, it does not check for UUID validity.
+    This is a direct method. It does not check for player name and UUID validity.
 
     Args:
         src: The source of the command (e.g., console or player).
