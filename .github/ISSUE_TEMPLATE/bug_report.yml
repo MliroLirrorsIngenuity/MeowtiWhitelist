@@ -1,0 +1,71 @@
+---
+name: Bug 反馈
+description: 报告一个漏洞或错误
+title: "[BUG]"
+labels: ["bug"]
+body:
+  - type: checkboxes
+    id: precheck
+    attributes:
+      label: 提交前必读
+      options:
+        - label: 我已使用 **issue标题关键词** 搜索过现有问题
+          required: true
+        - label: 我已确认这不是重复issue
+          required: true
+        - label: 我已阅读项目Wiki
+          required: true
+        - label: 我已确认文档中未提及此问题
+          required: true
+        - label: 我没看这些选项而是乱选的
+          required: false
+        - label: 我已尽可能排除自身环境/配置问题
+          required: true
+
+  - type: input
+    id: server-type
+    attributes:
+      label: 所使用的服务端类型
+      placeholder: 例如 Paper 1.20.1
+    validations:
+      required: true
+
+  - type: input
+    id: minecraft-version
+    attributes:
+      label: Minecraft版本
+      placeholder: 例如 1.20.1
+    validations:
+      required: true
+
+  - type: input
+    id: plugin-version
+    attributes:
+      label: 插件版本
+      placeholder: 例如 v2.0.0
+    validations:
+      required: true
+
+  - type: input
+    id: python-version
+    attributes:
+      label: Python版本
+      placeholder: 例如 3.11.4
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 问题描述
+      placeholder: 请用1-2句话清晰描述异常现象
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 复现步骤
+      placeholder: 请用1-2句话清晰描述复现方式
+    validations:
+      required: true

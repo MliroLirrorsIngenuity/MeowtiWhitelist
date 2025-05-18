@@ -1,0 +1,36 @@
+---
+name: 功能请求
+description: 提交新功能建议
+title: "[FEATURE]"
+labels: ["enhancement"]
+body:
+  - type: checkboxes
+    id: precheck
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 我已使用 **issue标题关键词** 搜索并确认无重复提案
+          required: true
+        - label: 我已阅读相关文档确认无类似功能
+          required: true
+        - label: 我没看这些选项而是乱选的
+          required: false
+        - label: 该需求无法通过现有功能实现
+          required: true
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: 功能描述
+      description: 用一句话说明核心功能
+      placeholder: 例如：增加某种API接口
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: 补充说明（可选）
+      description: 可提供示意图/参考实现/技术方案
+    validations:
+      required: false
