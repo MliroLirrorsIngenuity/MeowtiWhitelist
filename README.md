@@ -17,7 +17,7 @@
   - [使用方式](#使用方式)
     - [依赖](#依赖)
     - [安装](#安装)
-    - [配置&指令](#配置指令)
+    - [配置&指令&API](#配置指令API)
   - [提问前必看](#提问前必看)
   - [贡献者](#贡献者)
   - [致谢](#致谢)
@@ -28,7 +28,8 @@
 
   - 解决使用多个不同 **Yggdrasil** 验证服务导致的UUID冲突或不正确的问题。
   - 使用简单命令，管理来自不同 **Yggdrasil** 验证来源的白名单添加。
-  - 不再需要手动添加对应验证来源的正确UUID到 `whitelist.json` ~~不是哥们谁又手动改`whitelist.json`~~
+  - 不再需要手动添加对应验证来源的正确UUID到 `whitelist.json` 。 ~~不是哥们谁又手动改`whitelist.json`~~
+  - 我们提供了一系列API供开发者调用，你可以使用本插件来管理并获取多个来源的UUID。
 
 ## 使用方式
 
@@ -49,7 +50,7 @@
 3. 安装所需的[依赖](#依赖)
 4. [通过MCDReforged启动服务器](https://docs.mcdreforged.com/zh-cn/latest/quick_start/first_run.html#run)
 
-### 配置&指令
+### 配置&指令&API
 详见 [Wiki](https://github.com/MliroLirrorsIngenuity/MeowtiWhitelist/wiki)
 
 ## 提问前必看
