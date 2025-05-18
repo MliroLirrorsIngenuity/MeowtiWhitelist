@@ -5,8 +5,8 @@ from mcdreforged.plugin.si.server_interface import ServerInterface
 
 from meowtiwhitelist.utils.config_utils import server_dirname
 from meowtiwhitelist.utils.logger_utils import log, log_available_services, log_conflict_errors
-from meowtiwhitelist.utils.uuid_utils.service_loader import build_service_mapping, service_conflicts
-from meowtiwhitelist.utils.uuid_utils.uuid_utils import fetchers
+from meowtiwhitelist.utils.service_loader_utils import build_service_mapping, service_conflicts
+from meowtiwhitelist.utils.uuid_utils import fetchers
 from meowtiwhitelist.utils.translater_utils import tr
 from meowtiwhitelist.utils.file_utils import (
     get_backup_dir,

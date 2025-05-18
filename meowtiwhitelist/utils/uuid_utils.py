@@ -2,7 +2,7 @@ import requests
 import re
 from typing import Optional, Dict, Union
 
-from meowtiwhitelist.utils.uuid_utils.service_loader import services
+from meowtiwhitelist.utils.service_loader_utils import services
 
 _UUID_PATTERN = re.compile(
     r"([a-fA-F0-9]{8})"
