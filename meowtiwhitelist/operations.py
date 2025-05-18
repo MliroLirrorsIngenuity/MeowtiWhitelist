@@ -20,11 +20,15 @@ from meowtiwhitelist.utils.file_utils import (
 
 
 def create_whitelist_file(json_list: list, workpath: str, type: str):
-    backup_dir = get_backup_dir(workpath)
-    backup_whitelist_path = get_backup_whitelist_path(backup_dir, type)
-    whitelist_path = get_whitelist_path(workpath)
+    if config.enable_backup:
+        backup_dir = get_backup_dir(workpath)
+        backup_whitelist_path = get_backup_whitelist_path(backup_dir, type)
+        whitelist_path = get_whitelist_path(workpath)
+        move_existing_whitelist(whitelist_path, backup_whitelist_path)
+        clean_old_backups(backup_dir)
+    else:
+        whitelist_path = get_whitelist_path(workpath)
 
-    move_existing_whitelist(whitelist_path, backup_whitelist_path)
     write_new_whitelist(whitelist_path, json_list)
 
 

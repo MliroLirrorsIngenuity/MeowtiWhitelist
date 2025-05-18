@@ -8,6 +8,7 @@ from meowtiwhitelist.constants import CONFIG_FILE
 class Configuration(Serializable):
     server_dirname: str = "server"
     permission: int = 3
+    enable_backup: bool = True
 
     def save(self):
         ServerInterface.get_instance().as_plugin_server_interface().save_config_simple(
