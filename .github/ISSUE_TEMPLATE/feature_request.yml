@@ -1,8 +1,9 @@
 ---
 name: 功能请求
 description: 提交新功能建议
-title: "[FEATURE]"
+title: "[Feature Request]"
 labels: ["enhancement"]
+type: Feature
 body:
   - type: checkboxes
     id: precheck

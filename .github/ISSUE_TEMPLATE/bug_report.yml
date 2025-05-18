@@ -1,8 +1,9 @@
 ---
 name: Bug 反馈
 description: 报告一个漏洞或错误
-title: "[BUG]"
+title: "[Bug]"
 labels: ["bug"]
+type: Bug
 body:
   - type: checkboxes
     id: precheck
@@ -67,5 +68,13 @@ body:
     attributes:
       label: 复现步骤
       placeholder: 请用1-2句话清晰描述复现方式
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 日志及补充
+      placeholder: 尽可能将日志等更多信息粘贴在这里
     validations:
       required: true
