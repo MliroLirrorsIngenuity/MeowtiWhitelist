@@ -30,3 +30,4 @@ meowtiwhitelist:
     conflict_header: "§cService configuration conflict:"
     conflict_id: "§c- Service ID {0} is duplicated in the {1} file"
     conflict_name: "§c- Service name {0} is duplicated in the {1} file"
+    backup_disabled_warning: "Backup still not disabled! We trust you have supercow power and know what you are doing. Only after you agree to I_KNOW_BACKUP_IS_DISABLED in the config will backup be truly disabled."
