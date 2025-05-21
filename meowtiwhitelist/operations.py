@@ -20,7 +20,7 @@ from meowtiwhitelist.utils.file_utils import (
 
 
 def create_whitelist_file(json_list: list, workpath: str, type: str):
-    if config.enable_backup:
+    if not config.disable_backup:
         backup_dir = get_backup_dir(workpath)
         backup_whitelist_path = get_backup_whitelist_path(backup_dir, type)
         whitelist_path = get_whitelist_path(workpath)
