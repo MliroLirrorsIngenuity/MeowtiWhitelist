@@ -9,6 +9,13 @@ class Configuration(Serializable):
     server_dirname: str = "server"
     permission: int = 3
     disable_backup: bool = False
+    i_know_backup_is_disabled: bool = False
+
+    def serialize(self) -> dict: # Hide config option
+        data = super().serialize()
+        if self.i_know_backup_is_disabled is False:
+            data.pop('i_know_backup_is_disabled', None)
+        return data
 
     def save(self):
         ServerInterface.get_instance().as_plugin_server_interface().save_config_simple(

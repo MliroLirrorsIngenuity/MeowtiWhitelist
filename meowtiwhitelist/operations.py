@@ -20,14 +20,14 @@ from meowtiwhitelist.utils.file_utils import (
 
 
 def create_whitelist_file(json_list: list, workpath: str, type: str):
-    if not config.disable_backup:
+    if config.disable_backup and config.i_know_backup_is_disabled:
+        whitelist_path = get_whitelist_path(workpath)
+    else:
         backup_dir = get_backup_dir(workpath)
         backup_whitelist_path = get_backup_whitelist_path(backup_dir, type)
         whitelist_path = get_whitelist_path(workpath)
         move_existing_whitelist(whitelist_path, backup_whitelist_path)
         clean_old_backups(backup_dir)
-    else:
-        whitelist_path = get_whitelist_path(workpath)
 
     write_new_whitelist(whitelist_path, json_list)
 
@@ -54,6 +54,9 @@ def add_whitelist_direct(src, player_name: str, uuid: str):
 
 
 def add_whitelist(src, player_name: str, service_id: str):
+    if config.disable_backup and not config.i_know_backup_is_disabled:
+        log(src, tr("error.backup_disabled_warning"))
+
     if service_conflicts:
         log_conflict_errors(src, service_conflicts)
         return
@@ -99,6 +102,9 @@ def add_whitelist(src, player_name: str, service_id: str):
 
 
 def remove_whitelist(src, player_name: str):
+    if config.disable_backup and not config.i_know_backup_is_disabled:
+        log(src, tr("error.backup_disabled_warning"))
+
     whitelist_path = get_whitelist_path(config.server_dirname)
     whitelist_list: list = json_file_to_list(whitelist_path)
     player_entry = next((entry for entry in whitelist_list if entry['name'] == player_name), None)

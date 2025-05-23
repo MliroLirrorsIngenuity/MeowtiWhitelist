@@ -30,3 +30,4 @@ meowtiwhitelist:
     conflict_header: "§c服务配置冲突："
     conflict_id: "§c- 服务ID {0} 在{1}文件中重复"
     conflict_name: "§c- 服务名称 {0} 在{1}文件中重复"
+    backup_disabled_warning: "§c备份功能尚未禁用，如果你知道你在做什么且决定无视文件操作风险，请在配置文件中添加 §e\u0022i_know_backup_is_disabled\u0022: true§c 以彻底关闭备份功能"
