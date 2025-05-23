@@ -3,7 +3,7 @@ import time
 from mcdreforged.plugin.si.plugin_server_interface import PluginServerInterface
 from mcdreforged.plugin.si.server_interface import ServerInterface
 
-from meowtiwhitelist.utils.config_utils import config, is_backup_disabled
+from meowtiwhitelist.utils.config_utils import config
 from meowtiwhitelist.utils.logger_utils import log, log_available_services, log_conflict_errors
 from meowtiwhitelist.utils.service_loader_utils import build_service_mapping, service_conflicts
 from meowtiwhitelist.utils.uuid_utils import fetchers
@@ -19,33 +19,17 @@ from meowtiwhitelist.utils.file_utils import (
 )
 
 
-def create_whitelist_file(json_list: list, workpath: str, type: str, src=None):
-    # Only disable backup if both are True, otherwise make backup on.
-    if config.disable_backup and config.I_KNOW_BACKUP_IS_DISABLED:
-        whitelist_path = get_whitelist_path(workpath)
-        write_new_whitelist(whitelist_path, json_list)
-    else:
-        # If disable_backup is True but I_KNOW_BACKUP_IS_DISABLED is False or not in configuration file, warn the user
-        if config.disable_backup and not config.I_KNOW_BACKUP_IS_DISABLED:
-            log_to_console(tr("error.backup_disabled_warning"))
-            if src and hasattr(src, 'get_permission_level') and src.get_permission_level() >= 4:
-                log(src, tr("error.backup_disabled_warning"))
-        # If not getting both disable option to True, continue make the backups
+def create_whitelist_file(json_list: list, workpath: str, type: str):
+    if not config.disable_backup:
         backup_dir = get_backup_dir(workpath)
         backup_whitelist_path = get_backup_whitelist_path(backup_dir, type)
         whitelist_path = get_whitelist_path(workpath)
         move_existing_whitelist(whitelist_path, backup_whitelist_path)
         clean_old_backups(backup_dir)
-        write_new_whitelist(whitelist_path, json_list)
+    else:
+        whitelist_path = get_whitelist_path(workpath)
 
-
-# Spam our shit to console.
-from mcdreforged.api.all import ServerInterface
-
-def log_to_console(msg):
-    server = ServerInterface.get_instance()
-    if server:
-        server.logger.info(msg)
+    write_new_whitelist(whitelist_path, json_list)
 
 
 def add_whitelist_direct(src, player_name: str, uuid: str):
@@ -62,7 +46,8 @@ def add_whitelist_direct(src, player_name: str, uuid: str):
         log(src, tr("error.duplicate_name", player_name))
     else:
         new_whitelist_dict = {'uuid': uuid, 'name': player_name}
-        create_whitelist_file(whitelist_list + [new_whitelist_dict], config.server_dirname, '_A_', src)
+        whitelist_list.append(new_whitelist_dict)
+        create_whitelist_file(whitelist_list, config.server_dirname, '_A_')
         time.sleep(1)
         server_cmd(src, 'whitelist reload')
         log(src, tr("success.add", player_name))
@@ -104,7 +89,8 @@ def add_whitelist(src, player_name: str, service_id: str):
             log(src, tr("error.service_status_code", uuid))
         elif uuid is not None:
             new_whitelist_dict = {'uuid': uuid, 'name': player_name}
-            create_whitelist_file(whitelist_list + [new_whitelist_dict], config.server_dirname, '_A_', src)
+            whitelist_list.append(new_whitelist_dict)
+            create_whitelist_file(whitelist_list, config.server_dirname, '_A_')
             time.sleep(1)
             server_cmd(src, 'whitelist reload')
             log(src, tr("success.add", player_name))
@@ -118,7 +104,7 @@ def remove_whitelist(src, player_name: str):
     player_entry = next((entry for entry in whitelist_list if entry['name'] == player_name), None)
     if player_entry:
         whitelist_list.remove(player_entry)
-        create_whitelist_file(whitelist_list, config.server_dirname, '_R_', src)
+        create_whitelist_file(whitelist_list, config.server_dirname, '_R_')
         log(src, tr("success.remove", player_name))
     else:
         log(src, tr("error.not_found", player_name))
