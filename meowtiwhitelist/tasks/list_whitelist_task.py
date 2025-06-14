@@ -35,13 +35,13 @@ class ListWhitelistTask:
             player_name, player_uuid = entry['name'], entry['uuid']
             log(src, f'[#{i}] {player_name} - {player_uuid}')
 
-        t_prev = RText('<-')
+        t_prev = RText('<-----')
         if page > 1:
             t_prev.h(tr('prev_page_hover')).c(RAction.run_command, self._make_command(page - 1))
         else:
             t_prev.set_color(RColor.dark_gray)
 
-        t_next = RText('->')
+        t_next = RText('----->')
         if page < total_pages:
             t_next.h(tr('next_page_hover')).c(RAction.run_command, self._make_command(page + 1))
         else:
