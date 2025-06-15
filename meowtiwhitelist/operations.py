@@ -1,5 +1,7 @@
 import time
 
+from mcdreforged.minecraft.rtext.style import RAction, RColor
+from mcdreforged.minecraft.rtext.text import RText, RTextList
 from mcdreforged.plugin.si.plugin_server_interface import PluginServerInterface
 from mcdreforged.plugin.si.server_interface import ServerInterface
 
@@ -114,15 +116,6 @@ def remove_whitelist(src, player_name: str):
         log(src, tr("success.remove", player_name))
     else:
         log(src, tr("error.not_found", player_name))
-
-
-def list_whitelist(src):
-    whitelist_path = get_whitelist_path(config.server_dirname)
-    whitelist_list: list = json_file_to_list(whitelist_path)
-    log(src, tr("list"))
-    for i, entry in enumerate(whitelist_list, 1):
-        player_name, player_uuid = entry['name'], entry['uuid']
-        log(src, f'{i}: {player_name} - {player_uuid}')
 
 
 def reload_plugin(src, server: PluginServerInterface):

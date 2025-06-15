@@ -12,6 +12,8 @@ meowtiwhitelist:
     item: "§e{0} = §b{1}§r"
     none: "§cNo available Service"
   list: "§a===== Whitelist ====="
+  prev_page_hover: "Previous Page"
+  next_page_hover: "Next Page"
   success:
     add: "§a{0} has been added to the whitelist"
     remove: "§a{0} has been removed from the whitelist"
@@ -31,3 +33,4 @@ meowtiwhitelist:
     conflict_id: "§c- Service ID {0} is duplicated in the {1} file"
     conflict_name: "§c- Service name {0} is duplicated in the {1} file"
     backup_disabled_warning: "§cBackup function has not been disabled yet. If you know what you are doing and decide to ignore the file operation risk, please add §e\u0022i_know_backup_is_disabled\u0022: true§c in the configuration file to completely disable the backup function"
+    invalid_argument: "§cInvalid argument"

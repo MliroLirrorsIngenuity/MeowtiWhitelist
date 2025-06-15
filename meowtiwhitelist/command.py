@@ -4,7 +4,8 @@ from meowtiwhitelist.constants import PREFIX, VERSION
 from meowtiwhitelist.utils.config_utils import config
 from meowtiwhitelist.utils.logger_utils import log, log_available_services
 from meowtiwhitelist.utils.translater_utils import tr
-from meowtiwhitelist.operations import add_whitelist, remove_whitelist, list_whitelist, reload_plugin
+from meowtiwhitelist.operations import add_whitelist, remove_whitelist, reload_plugin
+from meowtiwhitelist.tasks.list_whitelist_task import ListWhitelistTask
 
 
 def register_command(server: PluginServerInterface):
@@ -14,6 +15,14 @@ def register_command(server: PluginServerInterface):
     def show_help(src: CommandSource):
         log(src, tr("help_msg", PREFIX, VERSION))
         log_available_services(src)
+
+    def list_command_handler(src: CommandSource, page_str: str = '1'):
+        try:
+            page = int(page_str)
+        except (ValueError, TypeError):
+            log(src, tr("error.invalid_argument"))
+            return
+        ListWhitelistTask(src, page).run()
 
     server.register_command(
         Literal(PREFIX)
@@ -52,7 +61,10 @@ def register_command(server: PluginServerInterface):
         )
         .then(
             get_literal_node("list")
-            .runs(lambda src: list_whitelist(src))
+            .runs(lambda src: list_command_handler(src))
+            .then(
+                Text("page").runs(lambda src, ctx: list_command_handler(src, ctx["page"]))
+            )
         )
         .then(
             get_literal_node("reload")
