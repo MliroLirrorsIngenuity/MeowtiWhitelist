@@ -3,7 +3,6 @@ name: Bug 反馈
 description: 报告一个漏洞或错误
 title: "[Bug]"
 labels: ["bug"]
-type: Bug
 body:
   - type: checkboxes
     id: precheck
@@ -72,7 +71,7 @@ body:
       required: true
 
   - type: textarea
-    id: reproduction
+    id: logs
     attributes:
       label: 日志及补充
       placeholder: 尽可能将日志等更多信息粘贴在这里
