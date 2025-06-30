@@ -13,21 +13,16 @@
 <details>
   <summary>Table of Contents</summary>
 
-  - [TL;DR](#TL;DR)
   - [Features](#features)
   - [Usage](#usage)
     - [Requirements](#requirements)
     - [Installation](#installation)
-    - [Configuration & Commands](#configuration--commands)
+    - [Configuration & Commands & API](#configuration--commands--api)
   - [Before Asking Questions](#before-asking-questions)
   - [Contributors](#contributors)
   - [Acknowledgements](#acknowledgements)
 
 </details>
-
-## TL;DR
-
-- ~~tf r u talking about~~ You can just run `!!MCDR plugin install meowtiwhitelist` in your Console to install the plugin.
 
 ## Features
 
@@ -47,12 +42,26 @@
 
 ### Installation
 
+Run the following command in your running MCDReforged instance and follow the prompts to install.
+
+```
+!!MCDR plugin install meowtiwhitelist
+```
+
+If the server's network environment has difficulty accessing the installation source, you can try the manual installation below.
+
+<details>
+  <summary>Manual Installation</summary>
+
+
 1. Download the latest version of MeowtiWhitelist from [GitHub Releases](https://github.com/MliroLirrorsIngenuity/MeowtiWhitelist/releases).
 2. Place the plugin into MCDR’s `plugins` folder.
 3. Install the [requirements](#requirements).
 4. [Start the server with MCDReforged](https://docs.mcdreforged.com/zh-cn/latest/quick_start/first_run.html#run).
 
-### Configuration & Commands
+</details>
+
+### Configuration & Commands & API
 See [Wiki](https://github.com/MliroLirrorsIngenuity/MeowtiWhitelist/wiki).
 
 ## Before Asking Questions
