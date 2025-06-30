@@ -13,6 +13,7 @@
 <details>
   <summary>Table of Contents</summary>
 
+  - [TL;DR](#TL;DR)
   - [Features](#features)
   - [Usage](#usage)
     - [Requirements](#requirements)
@@ -23,6 +24,10 @@
   - [Acknowledgements](#acknowledgements)
 
 </details>
+
+## TL;DR
+
+- ~~tf r u talking about~~ You can just run `!!MCDR plugin install meowtiwhitelist` in your Console to install the plugin.
 
 ## Features
 
