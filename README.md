@@ -48,7 +48,7 @@
 !!MCDR plugin install meowtiwhitelist
 ```
 
-如果服务端网络环境访问安装源存在困难，可以尝试下面的手动安装
+如果服务端网络环境访问安装源存在困难或出于其他原因，可以尝试下面的手动安装
 
 <details>
   <summary>手动安装</summary>
