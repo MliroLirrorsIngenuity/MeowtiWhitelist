@@ -48,7 +48,7 @@ Run the following command in your running MCDReforged instance and follow the pr
 !!MCDR plugin install meowtiwhitelist
 ```
 
-If the server's network environment has difficulty accessing the installation source, you can try the manual installation below.
+If the server's network environment has difficulty accessing the installation source or for other reasons, you can try the manual installation below.
 
 <details>
   <summary>Manual Installation</summary>
