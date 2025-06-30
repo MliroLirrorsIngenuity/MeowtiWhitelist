@@ -12,7 +12,8 @@
 
 <details>
   <summary>目录</summary>
-  
+
+  - [TL;DR](#TL;DR_太长不看版本)
   - [特性](#特性)
   - [使用方式](#使用方式)
     - [依赖](#依赖)
@@ -23,6 +24,9 @@
   - [致谢](#致谢)
 
 </details>
+
+## TL;DR_太长不看版本
+  - ~~说啥说了一大串，听不懂 给我拿两百块钱去~~ 您可以在 Server-Side 执行 `!!MCDR plugin install meowtiwhitelist` 来直接安装。
 
 ## 特性
 
