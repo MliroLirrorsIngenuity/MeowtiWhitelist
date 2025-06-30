@@ -3,6 +3,7 @@ name: Bug 反馈
 description: 报告一个漏洞或错误
 title: "[Bug]"
 labels: ["bug"]
+type: Bug
 body:
   - type: checkboxes
     id: precheck
