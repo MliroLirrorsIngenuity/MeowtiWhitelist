@@ -13,20 +13,16 @@
 <details>
   <summary>目录</summary>
 
-  - [TL;DR](#TL;DR_太长不看版本)
   - [特性](#特性)
   - [使用方式](#使用方式)
     - [依赖](#依赖)
     - [安装](#安装)
-    - [配置&指令&API](#配置指令API)
+    - [配置&指令&API](#配置指令api)
   - [提问前必看](#提问前必看)
   - [贡献者](#贡献者)
   - [致谢](#致谢)
 
 </details>
-
-## TL;DR_太长不看版本
-  - ~~说啥说了一大串，听不懂 给我拿两百块钱去~~ 您可以在 Server-Side 执行 `!!MCDR plugin install meowtiwhitelist` 来直接安装。
 
 ## 特性
 
@@ -47,14 +43,24 @@
 
 ### 安装
 
-~~把大象装进冰箱需要几步~~
+在运行的 MCDReforged 实例中执行以下命令，根据提示引导进行安装。
+```
+!!MCDR plugin install meowtiwhitelist
+```
+
+如果服务端网络环境访问安装源存在困难，可以尝试下面的手动安装
+
+<details>
+  <summary>手动安装</summary>
 
 1. 从 [GitHub Releases](https://github.com/MliroLirrorsIngenuity/MeowtiWhitelist/releases)中下载最新版本的 MeowtiWhitelist
 2. 将下载的插件放入MCDR的`plugins`目录中
 3. 安装所需的[依赖](#依赖)
 4. [通过MCDReforged启动服务器](https://docs.mcdreforged.com/zh-cn/latest/quick_start/first_run.html#run)
 
-### 配置&指令&API
+</details>
+
+## 配置&指令&API
 详见 [Wiki](https://github.com/MliroLirrorsIngenuity/MeowtiWhitelist/wiki)
 
 ## 提问前必看
