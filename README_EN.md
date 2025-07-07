@@ -66,9 +66,6 @@ See [Wiki](https://github.com/MliroLirrorsIngenuity/MeowtiWhitelist/wiki).
 
 ## Before Asking Questions
 
-> "The operating team or your helpers are not gods."
-> <div align="right">—— “LittleSkin User Manual”</div>
-
 Please confirm:
 
 - You have tried all possible solutions.
@@ -85,5 +82,3 @@ Please confirm:
 [Lazy-Bing-Server/MCDR-offline-whitelist-manager](https://github.com/Lazy-Bing-Server/MCDR-offline-whitelist-manager): Provided the base idea.
 
 [CaaMoe/MultiLogin](https://github.com/CaaMoe/MultiLogin): Inspired the configuration approach.
-
-[LittleSkinChina/manual-ng](https://github.com/LittleSkinChina/manual-ng): Inspired the "Before Asking Questions" section (CC-BY-SA 4.0)
