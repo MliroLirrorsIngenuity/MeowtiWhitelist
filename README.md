@@ -65,9 +65,6 @@
 
 ## 提问前必看
 
-> "运营团队，或是帮助你的人，并不是神 "
-> <div align="right"> —— 《LittleSkin 用户使用手册》 </div>
-
 在提问之前，请确保：
 
 - 已经尝试了所有可能的解决方案
@@ -94,5 +91,3 @@
 [Lazy-Bing-Server/MCDR-offline-whitelist-manager](https://github.com/Lazy-Bing-Server/MCDR-offline-whitelist-manager)：提供了插件主体构建思路
 
 [CaaMoe/MultiLogin](https://github.com/CaaMoe/MultiLogin)：提供了配置插件的方案灵感
-
-[LittleSkinChina/manual-ng](https://github.com/LittleSkinChina/manual-ng)：提供了提问前必看的内容灵感 (CC-BY-SA 4.0)
