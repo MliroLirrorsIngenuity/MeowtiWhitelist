@@ -80,6 +80,10 @@
   - 插件列表
 
   - MCDR 版本号、Minecraft 服务端版本号和插件版本号
+ 
+- 提问渠道说明
+  - **使用问题/配置疑问** → [Discussions](https://github.com/MliroLirrorsIngenuity/MeowtiWhitelist/discussions)
+  - **Bug/功能请求** → [Issues](https://github.com/MliroLirrorsIngenuity/MeowtiWhitelist/issues)
 
 ## 贡献者
 <a href="https://github.com/MliroLirrorsIngenuity/MeowtiWhitelist/graphs/contributors">
