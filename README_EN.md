@@ -71,6 +71,9 @@ Please confirm:
 - You have tried all possible solutions.
 - You have searched for answers (like checking [Issues](https://github.com/MliroLirrorsIngenuity/MeowtiWhitelist/issues)).
 - You have provided enough info to help developers find the issue (logs, config files, plugin lists, and version details).
+- Explanation of Question Submission Channels
+  - **Usage Issues/Configuration Questions/Other Issues** → [Discussions](https://github.com/MliroLirrorsIngenuity/MeowtiWhitelist/discussions)
+  - **Bug/Feature Request** → [Issues](https://github.com/MliroLirrorsIngenuity/MeowtiWhitelist/issues)
 
 ## Contributors
 <a href="https://github.com/MliroLirrorsIngenuity/MeowtiWhitelist/graphs/contributors">
