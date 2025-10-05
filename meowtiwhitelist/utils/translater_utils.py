@@ -1,5 +1,4 @@
-from mcdreforged.plugin.si.server_interface import ServerInterface
-from mcdreforged.translation.translation_text import RTextMCDRTranslation
+from mcdreforged.api.all import ServerInterface, RTextMCDRTranslation
 
 
 def tr(translation_key: str, *args) -> RTextMCDRTranslation:

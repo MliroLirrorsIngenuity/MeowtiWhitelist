@@ -1,6 +1,6 @@
 import os
 
-from mcdreforged.plugin.si.server_interface import ServerInterface
+from mcdreforged.api.all import ServerInterface
 
 PREFIX = "!!whitelist"
 

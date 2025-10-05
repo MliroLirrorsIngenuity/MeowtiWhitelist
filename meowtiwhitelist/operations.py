@@ -1,9 +1,6 @@
 import time
 
-from mcdreforged.minecraft.rtext.style import RAction, RColor
-from mcdreforged.minecraft.rtext.text import RText, RTextList
-from mcdreforged.plugin.si.plugin_server_interface import PluginServerInterface
-from mcdreforged.plugin.si.server_interface import ServerInterface
+from mcdreforged.api.all import PluginServerInterface, ServerInterface
 
 from meowtiwhitelist.utils.config_utils import config
 from meowtiwhitelist.utils.logger_utils import log, log_available_services, log_conflict_errors
