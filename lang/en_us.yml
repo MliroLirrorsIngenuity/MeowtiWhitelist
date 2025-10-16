@@ -27,7 +27,7 @@ meowtiwhitelist:
     require_service: "§cService cannot be empty. Correct usage: §r{0} add §e[Player name] §b(Service id/name)§r"
     invalid_service: "§cInvalid Service"
     unknown_error: "§cFailed to add player {0} to the whitelist. The user may not exist. Please try again."
-    service_not_configure: "§cService configuration error"
+    service_not_configured: "§cService configuration error"
     service_status_code: "§cService request failed, status code: {0}"
     conflict_header: "§cService configuration conflict:"
     conflict_id: "§c- Service ID {0} is duplicated in the {1} file"

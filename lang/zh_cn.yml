@@ -27,7 +27,7 @@ meowtiwhitelist:
     require_service: "§c服务不能为空，正确用法： §r{0} add §e[玩家名] §b(服务编号/名称)§r"
     invalid_service: "§c无效的服务"
     unknown_error: "§c添加玩家 {0} 白名单时出现错误或用户不存在，请重试"
-    service_not_configure: "§错误的服务配置"
+    service_not_configured: "§c错误的服务配置"
     service_status_code: "§c服务请求失败，状态码：{0}"
     conflict_header: "§c服务配置冲突："
     conflict_id: "§c- 服务ID {0} 在{1}文件中重复"
