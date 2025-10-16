@@ -58,8 +58,8 @@ def create_example_files():
         os.makedirs(EXAMPLE_DIR, exist_ok=True)
 
     existing_files = {f for f in os.listdir(EXAMPLE_DIR) if f.endswith(('.yml', '.yaml'))}
-    if not existing_files:
-        for filename, content in EXAMPLE_FILES.items():
+    for filename, content in EXAMPLE_FILES.items():
+        if filename not in existing_files:
             file_path = os.path.join(EXAMPLE_DIR, filename)
             with open(file_path, "w", encoding="utf-8") as f:
                 f.write(content)

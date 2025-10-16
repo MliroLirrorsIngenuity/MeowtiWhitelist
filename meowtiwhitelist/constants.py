@@ -30,4 +30,15 @@ serviceType: BLESSING_SKIN
 yggdrasilAuth:
   blessingSkin:
     apiRoot: 'https://littleskin.cn/api/yggdrasil'"""
+,
+"elyby.yml":
+"""# Please edit before use.
+id: 0
+
+name: 'Elyby'
+# Don't change it unless you really want to.
+serviceType: CUSTOM_YGGDRASIL
+custom:
+  method: 'GET'
+  url: 'https://authserver.ely.by/api/users/profiles/minecraft'"""
 }
