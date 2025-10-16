@@ -24,7 +24,7 @@ def get_mojang_uuid(username: str) -> Optional[str]:
     return None
 
 def get_blessing_skin_uuid(username: str, api_root: str) -> Union[int, str, None]:
-    url = f"{api_root}/api/profiles/minecraft"
+    url = f"{api_root.rstrip('/')}/api/profiles/minecraft"
     response = requests.post(url, json=[username], timeout=5)
     if response.status_code == 200:
         items = response.json()
