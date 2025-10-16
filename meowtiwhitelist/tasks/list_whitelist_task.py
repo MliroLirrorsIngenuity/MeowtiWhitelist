@@ -25,15 +25,19 @@ class ListWhitelistTask:
         total_items = len(whitelist_list)
         total_pages = (total_items - 1) // per_page + 1
 
+        whitelist_list.reverse()
         start_index = (page - 1) * per_page
         end_index = min(start_index + per_page, total_items)
         page_entries = whitelist_list[start_index:end_index]
 
         log(src, tr("list"))
 
-        for i, entry in enumerate(page_entries, start=start_index + 1):
+        for idx_in_page, entry in enumerate(page_entries):
+            reversed_index = start_index + idx_in_page
+            item_num = total_items - reversed_index
+
             player_name, player_uuid = entry['name'], entry['uuid']
-            log(src, f'[#{i}] {player_name} - {player_uuid}')
+            log(src, f'[#{item_num}] {player_name} - {player_uuid}')
 
         t_prev = RText('<-----')
         if page > 1:
